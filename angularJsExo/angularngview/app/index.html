@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>angularngview</title>
+
+        <!-- Bootstrap -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <style>
+            .navbar {
+                border-radius: 0;
+            }
+
+        </style>
+    </head>
+
+    <!-- apply our angular app to our site -->
+    <body ng-app="routerApp">
+
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a ui-sref="home">Home</a>
+                </li>
+                <li>
+                    <a ui-sref="about">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+
+            <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+            <div ui-view></div>
+
+        </div>
+
+        <!-- JS (load angular, ui-router, and our custom js file) -->
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+</html>

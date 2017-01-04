@@ -1,0 +1,14 @@
+.cart {
+  display: none;
+  position: absolute;
+  background-color: rgba(93, 120, 115, 0.60);
+  width: 400px;
+  margin-left: -300px;
+}
+input{
+  background-color: rgba(93, 120, 115, 0.60);
+}
+
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    /*vertical-align: middle;*/
+}

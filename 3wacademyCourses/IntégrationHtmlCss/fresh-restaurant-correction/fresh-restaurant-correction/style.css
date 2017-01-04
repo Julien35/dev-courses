@@ -1,0 +1,180 @@
+
+/* *********************************************************************************************
+	VISUALISATION DES BLOCS
+********************************************************************************************* */
+
+div, header, section, article, aside, nav {
+	border: 1px dashed rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.05);
+}
+
+.clear {
+	border: 2px dashed red;
+}
+
+/* *********************************************************************************************
+	GENERIC
+********************************************************************************************* */
+
+body {
+	font-family: sans-serif;
+	font-size: 13px;
+	color: #555;
+	background-image: url("images/body_bg.png");
+	background-repeat: repeat-x;
+	background-position: 0 110px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: #ab3;
+}
+a.more {
+	text-decoration: underline;
+	color: #222;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000 !important;
+}
+.orange {
+	color: #f63;
+}
+.clear {
+	clear: both;
+}
+p {
+	margin-top: 2px;
+}
+
+/* *********************************************************************************************
+	PAGE
+********************************************************************************************* */
+
+.page {
+	width: 900px;
+	margin: 0 auto;
+}
+
+/* *********************************************************************************************
+	HEADER
+********************************************************************************************* */
+
+header {
+	margin: 10px;
+	padding: 10px;
+	background-color: transparent;
+	background-image: url("images/header_bg.png");
+	background-repeat: no-repeat;
+}
+header nav {
+	margin: 10px;
+	padding: 10px;
+	text-align: right;
+}
+header nav li {
+	display: inline-block;
+	margin-left: 10px;
+	/*padding-top: 20px;
+	background-image: url("images/puce.png");
+	background-repeat: no-repeat;
+	background-position: center 0;*/
+}
+header nav a {
+	color: #986;
+}
+header nav a::before{
+    content: "■";
+    display: block;
+    text-align: center;
+    padding-bottom: 12px;
+
+}
+header article {
+	margin: 10px;
+	padding: 10px;
+	margin-left: 400px;
+}
+header h1 {
+	font-size: 32px;
+	text-align: right;
+	color: #fff;
+	padding-right: 190px;
+}
+
+/* *********************************************************************************************
+	CONTENT
+********************************************************************************************* */
+
+.main {
+	margin: 10px;
+	padding: 10px;
+}
+.main h2 {
+	margin-top: -20px;
+	border-bottom: 2px dotted #999;
+}
+.main aside {
+	margin: 10px;
+	padding: 10px;
+	float: left;
+	width: 25%;
+	border-right: 2px dotted #999;
+}
+.main aside li {
+	padding-left: 1.5em;
+	background-image: url("images/puce.png");
+	background-repeat: no-repeat;
+	background-position: left 0.5em;	
+}
+.main section {
+	margin: 10px;
+	padding: 10px;
+	margin-left: 30%;
+}
+.main section article {
+	display: inline-block;
+	width: 42%;
+	margin: 10px;
+	padding: 10px;
+}
+.main section img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.main section h3 {
+	margin-top: 16px;
+	margin-bottom: 2px;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+/* *********************************************************************************************
+	FOOTER
+********************************************************************************************* */
+
+footer {
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+footer nav{
+	margin: 10px;
+	padding: 10px;background-color: #986;
+}
+footer nav, footer nav a {
+	color: #fff;
+}
+
+footer nav li {
+	display: inline-block;
+}
+
+footer li+li:before {
+	content: " | ";
+}

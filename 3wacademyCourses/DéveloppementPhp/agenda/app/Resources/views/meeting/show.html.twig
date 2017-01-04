@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Meeting</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ meeting.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ meeting.name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ meeting.email }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ meeting.phone }}</td>
+            </tr>
+            <tr>
+                <th>Reason</th>
+                <td>{{ meeting.reason }}</td>
+            </tr>
+            <tr>
+                <th>Meeting_date</th>
+                <td>{% if meeting.meetingdate %}{{ meeting.meetingdate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('meeting_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('meeting_edit', { 'id': meeting.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

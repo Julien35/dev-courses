@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/magical-slate.css">
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Classes -->
+    <script src="js/classes/ColorPalette.class.js"></script>
+    <script src="js/classes/Program.class.js"></script>
+    <script src="js/classes/Pen.class.js"></script>
+    <script src="js/classes/Slate.class.js"></script>
+</head>
+<body>
+    <h1><i class="fa fa-paint-brush"></i> Ardoise Magique ;-)</h1>
+
+    <main>
+        <canvas id="slate" class="slate" width="640" height="480"></canvas>
+
+        <canvas id="color-palette" class="color-palette hide" width="256" height="256"></canvas>
+    </main>
+
+    <hr>
+    <nav class="toolbar">
+        <ul>
+            <li>
+                <label>Outils</label>
+                <button id="tool-clear-canvas" title="Effacer"><i class="fa fa-eraser"></i></button>
+                <button id="tool-color-picker" title="Pipette"><i class="fa fa-eyedropper"></i></button>
+            </li>
+            <li>
+                <label>Couleur</label>
+                <div class="pen-color black" data-color="black"></div>
+                <div class="pen-color maroon" data-color="#5C2121"></div>
+                <div class="pen-color red" data-color="#B9121B"></div>
+                <div class="pen-color yellow" data-color="#FFBD07"></div>
+                <div class="pen-color green" data-color="#13B813"></div>
+                <div class="pen-color seagreen" data-color="#029E9A"></div>
+                <div class="pen-color blue" data-color="#0378A6"></div>
+            </li>
+            <li>
+                <label>Epaisseur</label>
+                <button class="pen-size" data-size="1">Fin</button>
+                <button class="pen-size" data-size="2">Normal</button>
+                <button class="pen-size" data-size="5">Epais</button>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Code principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+/*GLOBAL */
+* {
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	transition: all .2s ease 0s;
+}
+
+*:hover {
+	transition: all .2s ease 0s;
+}
+
+body {
+	font-family: "Open Sans", Arial;
+	margin: 0;
+	line-height: 1.8;
+	color: #666;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 25px;
+	background-color: white;
+
+}
+
+.clear::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+/* HEADER */
+#tagline {
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	background-position: center;
+	color: white;
+	padding: 200px 50px;
+	text-align: center;
+	font-family: "Candal";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#tagline h1 {
+	font-size: 3em;
+}
+
+#tagline p {
+	font-size: 2em;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-around;
+	background-color: #fcfcfc;
+}
+
+header nav a {
+	padding: 25px;
+	align-self: center;
+	color: #1e3e4b;
+	font-family: "Candal";
+	font-size: 1.4em;
+}
+
+header nav a:hover {
+	color: #fb8a9b;
+}
+
+header nav a .fa {
+	display: block;
+	text-align: center;
+	color: #fb8a9b;
+	font-size: 1.5em;
+}
+
+header nav a:hover .fa {
+	color: #203e4d;
+
+}
+
+input {
+	background-color: #fb8a9b;
+	color: white;
+	padding: 25px 100px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 1.5em;
+	width: 100%;
+	border: 0;
+}
+
+/* MAIN */
+main h2 {
+	color: #203e4d;
+	font-size: 1.8em;
+	font-family: "Candal";
+	text-align: center;
+	margin-top: 50px;
+	padding: 25px 0;
+	border-top: 1px dashed #46636e;
+	border-left: 1px dashed #46636e;
+	border-right: 1px dashed #46636e;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+}
+
+.host {
+	padding: 15px;
+}
+
+.host h3 {
+	font-family: "Candal", Arial;
+	text-align: center;
+	font-size: 1.2em;
+	color: #fb8a9b;
+	padding: 10px 0 0;
+}
+
+.host i {
+	display: block;
+	text-align: center;
+	font-size: 3em;
+	color: #fb8a9b;
+	margin: 25px 0 0;
+}
+
+.prix {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4em;
+	color: #fb8a9b;
+}
+
+/* PAGE MUTUALISE + DEDIE */
+.mutualise > p,
+.dedie > p,
+.cloud > p {
+	padding: 25px;
+}
+
+.mutualise h3, .mutualise h4,
+.dedie h3, .dedie h4,
+.cloud h3, .cloud h4 {
+	font-family: "Candal", Arial;
+	text-align: center;
+	font-size: 1.2em;
+	padding: 10px;
+}
+
+.mutualise article,
+.dedie article,
+.cloud article {
+	margin: 25px;
+	padding: 10px;
+	border: 1px dashed #203e4d;
+	text-align: center;
+	flex: 1;
+	align-self: flex-start;
+}
+
+.mutualise article .option,
+.dedie article .option,
+.cloud article .option {
+	background-color: #203e4d;
+	color: white!important;
+	padding: 25px;
+	margin-bottom: 10px;
+}
+
+.mutualise article ul li,
+.dedie article ul li,
+.cloud article ul li {
+	list-style-type: circle;
+	text-align: left;
+	font-size: 0.9em;
+	margin: 10px 0 10px 30px;
+}
+
+.mutualise article a,
+.dedie article a,
+.cloud article a {
+	background-color: #fb8a9b;
+	color: white;
+	display: block;
+	padding: 10px;
+	font-family: "Candal", Arial;
+}
+
+.mutualise article a:hover,
+.dedie article a:hover,
+.cloud article a:hover {
+	background-color: #ea5f77;
+}
+
+.mutualise .flex:hover article,
+.dedie .flex:hover article,
+.cloud .flex:hover article {
+	opacity: 0.65;
+}
+
+.mutualise:hover article:hover,
+.dedie:hover article:hover,
+.cloud:hover article:hover {
+	opacity: 1;
+}
+
+/* PAGE CONTACT */
+iframe {
+	width: 100%;
+	height: 500px;
+	opacity: 0.5;
+	border-bottom: 1px dashed #46636e;
+	border-left: 1px dashed #46636e;
+	border-right: 1px dashed #46636e;
+}
+
+iframe:hover {
+	opacity: 1;
+}
+
+.contact article {
+	text-align: center;
+	margin: 25px;
+	flex: 1;
+}
+
+.contact article h3 {
+	font-family: "Candal", Arial;
+	text-align: center;
+	font-size: 1.4em;
+	color: #fb8a9b;
+	padding: 0 0 10px;
+	border-bottom: 1px dashed #fb8a9b;
+	margin-bottom: 25px;
+}
+
+.contact article abbr {
+	font-weight: bold;
+}
+
+.contact article a {
+	color: #fb8a9b;
+}
+
+.contact article .fa {
+	font-size: 2em;
+}
+
+/* FOOTER */
+footer {
+	background-color: #203e4d;
+	padding: 50px;
+	text-align: center;
+}
+
+footer nav {
+	display: flex;
+	justify-content: space-around;
+	font-family: "Candal", sans-serif;
+}
+
+footer a, .explication, footer small {
+	color: white;
+	padding: 15px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 960px) {
+	header nav a {
+		padding: 15px;
+	}
+	#tagline {
+		padding: 50px 25px;
+	}
+	header nav, .flex, footer nav {
+		flex-direction: column;
+	}
+	.mutualise article,
+	.dedie article,
+	.cloud article {
+		align-self: stretch;
+	}
+}

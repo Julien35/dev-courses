@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Movies PHP JS</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/movies.css">
+</head>
+<body>
+    <h1>Les films du moment</h1>
+
+    <div id="filterform">
+      <p>
+        <label for="duration">duration filter (in min) : </label>
+        <input id="duration_choice" type="number" name="duration">
+        <select id="choice_select" name="choix">
+          <option value="-1">inférieur</option>
+          <option value="0">égale</option>
+          <option value="1">supérieur</option>
+        </select>
+
+        <input type="submit"
+          onclick="filtreMoviesDeuxLeRetour(duration_choice, choice_select);" value="ok">
+        <a href="index.php">reset</a>
+      </p>
+    </div>
+
+    <ul class="movie-list">
+        <?php foreach ($movies as $movie): ?>
+            <li class="" duration="<?= $movie['duration'] ?>">
+                <img src="images/<?= $covers[$movie['cover']] ?>">
+                <p>
+                    <strong><?= $movie['title'] ?></strong>
+                    <em><?= convertDuration($movie['duration']) ?></em>
+                </p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+    <script src="index.js" charset="utf-8"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Carrousel</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+    <!-- Perso CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+</head>
+
+<body class="container">
+
+    <header>
+        <!-- Dans l'en-tête de  la page :
+
+    * Ajouter un titre au programme : "Sliders".
+    * Créer une interface de navigation (*class : toolbar*) pour la barre d'outils,
+    avec un hyperlien (*id : toolbar-toggle*) permettant d'afficher ou de cacher la barre d'outils.
+
+    La barre d'outils est une liste de boutons, par défaut cachée :
+
+    * Un bouton (*id : slider-previous*) pour reculer dans le diaporama.
+    * Un bouton (*id : slider-toggle*) pour démarrer ou arrêter le carrousel.
+    * Un bouton (*id : slider-next*) pour avancer dans le diaporama.
+    * Un bouton (*id : slider-random*) pour se déplacer aléatoirement dans le diaporama.       -->
+
+        <h1>Sliders, les mondes parallèles ;-)</h1>
+
+        <div>
+            <a href="#" id="toolbar-toggle">
+                <i class="fa fa-arrow-down" aria-hidden="true"></i> Barre d'outils</a>
+
+            <nav class="toolbar">
+                <button id="slider-previous" type="button" name="slider-previous"><i class="fa fa-backward" aria-hidden="true"></i></button>
+                <button id="slider-toggle" type="button" name="slider-toggle"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button id="slider-next" type="button" name="slider-next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+                <button id="slider-random" type="button" name="slider-random"><i class="fa fa-random" aria-hidden="true"></i></button>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- Dans la partie principale de la page :
+
+      * Créer une figure (*id* et *class : slider*) représentant le diaporama, avec une seule image
+      et un seul titre pour les balises. Ne pas oublier de mettre un texte alternatif
+      pour l'image pour le référencement. -->
+
+        <figure id="slider" class="slider">
+            <img src="images/1.jpg" alt="image 1" />
+            <figcaption>Gribouilli sur mur</figcaption>
+        </figure>
+
+    </main>
+
+    <script src="js/slider.js" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="name" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" media="screen and (max-width: 640px)" href="smallscreen.css" type="text/css"/>
+
+        <title></title>
+        <style media="screen">
+
+            p {
+                border: solid red;
+
+                -webkit-transform: translate(100px) rotate(20deg);
+                -webkit-transform-origin: 0 -250px;
+
+                transform: translate(100px) rotate(20deg);
+                transform-origin: 0 -250px;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: #0000FF;
+                -moz-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+                transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+            }
+            .box:hover {
+                background-color: #FFCCCC;
+                width: 200px;
+                height: 200px;
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            #delay1 {
+                border-style: solid;
+                border-width: 1px;
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: #ff5c00;
+
+                position: relative;
+                -moz-transition-property: font-size;
+                -moz-transition-duration: 4s;
+                -moz-transition-delay: 2s;
+                font-size: 14px;
+            }
+            #delay1:hover {
+                background-color: #FFCCCC;
+                width: 200px;
+                height: 200px;
+                -moz-transition-property: font-size;
+                -moz-transition-duration: 4s;
+                -moz-transition-delay: 2s;
+                font-size: 36px;
+            }
+
+            .menuButton {
+                position: relative;
+                transition-property: background-color, color;
+                transition-duration: 1s;
+                transition-timing-function: ease-out;
+                text-align: left;
+                background-color: grey;
+                left: 5px;
+                top: 5px;
+                height: 26px;
+                color: white;
+                border-color: black;
+                font-family: sans-serif;
+                font-size: 20px;
+                text-decoration: none;
+                box-shadow: 2px 2px 1px black;
+                padding: 2px 4px;
+                border: solid 1px black;
+            }
+            .menuButton:hover {
+                position: relative;
+                transition-property: background-color, color;
+                transition-duration: 1s;
+                transition-timing-function: ease-out;
+                background-color: white;
+                color: black;
+                box-shadow: 2px 2px 1px black;
+            }
+
+            p {
+                padding-left: 60px;
+            }
+
+            #foo {
+                border-radius: 50px;
+                width: 50px;
+                height: 50px;
+                background: #c00;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: transform 1s;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <div class="sidebar">
+                <p>
+                    <a class="menuButton" href="home">Home</a>
+                </p>
+                <p>
+                    <a class="menuButton" href="about">About</a>
+                </p>
+                <p>
+                    <a class="menuButton" href="contact">Contact Us</a>
+                </p>
+                <p>
+                    <a class="menuButton" href="links">Links</a>
+                </p>
+            </div>
+        </nav>
+
+        <div id="delay1"></div>
+
+        <div class="box"></div>
+
+        <p>Click anywhere to move the ball</p>
+        <div id="foo"></div>
+
+        <script type="text/javascript">
+            var f = document.getElementById('foo');
+            document.addEventListener('click', function(ev) {
+                f.style.transform = 'translateY(' + (ev.clientY - 25) + 'px)';
+                f.style.transform += 'translateX(' + (ev.clientX - 25) + 'px)';
+            }, false);
+        </script>
+
+    </body>
+
+</html>

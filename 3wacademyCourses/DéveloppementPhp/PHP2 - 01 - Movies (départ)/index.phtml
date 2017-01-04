@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/movies.css">
+</head>
+<body>
+    <h1>Les films du moment</h1>
+
+    <form class="" action="index.php" method="post">
+      <p>
+        <label for="duration">duration filter (in min) : </label>
+        <input type="number" name="duration">
+        <select name="choix">
+          <option value="inférieur">inférieur</option>
+          <option value="égale">égale</option>
+          <option value="supérieur">supérieur</option>
+        </select>
+
+        <input type="submit" value="ok">
+        <a href="index.php">reset</a>
+      </p>
+    </form>
+
+    <?php var_dump($_POST) ?>
+
+    <ul class="movie-list">
+
+    <?php if (isset($_POST['duration'])) { ?>
+
+    <?php foreach ($movies as $movie): ?>
+
+        <?php if (($_POST['choix'] == 'inférieur') AND ($movie['duration'] < $_POST['duration'])){ ?>
+
+            <li>
+                <img src="images/<?= $covers[$movie['cover']] ?>">
+                <p>
+                    <strong><?= $movie['title'] ?></strong> -
+                    <em><?= convertDuration($movie['duration']) ?></em>
+                </p>
+            </li>
+
+        <?php } elseif (($_POST['choix'] == 'égale') AND ($movie['duration'] == $_POST['duration'])){ ?>
+
+              <li>
+                  <img src="images/<?= $covers[$movie['cover']] ?>">
+                  <p>
+                      <strong><?= $movie['title'] ?></strong> -
+                      <em><?= convertDuration($movie['duration']) ?></em>
+                  </p>
+              </li>
+
+        <?php } elseif (($_POST['choix'] == 'supérieur') AND ($movie['duration'] > $_POST['duration'])){ ?>
+
+               <li>
+                   <img src="images/<?= $covers[$movie['cover']] ?>">
+                   <p>
+                       <strong><?= $movie['title'] ?></strong> -
+                       <em><?= convertDuration($movie['duration']) ?></em>
+                   </p>
+               </li>
+
+           <?php } ?>
+
+    <?php endforeach; ?>
+
+
+      <?php } else { ?>
+
+        <?php foreach ($movies as $movie): ?>
+
+            <li>
+                <img src="images/<?= $covers[$movie['cover']] ?>">
+                <p>
+                    <strong><?= $movie['title'] ?></strong> -
+                    <em><?= convertDuration($movie['duration']) ?></em>
+                </p>
+            </li>
+
+        <?php endforeach; ?>
+
+        <?php } ?>
+    </ul>
+
+</body>
+</html>

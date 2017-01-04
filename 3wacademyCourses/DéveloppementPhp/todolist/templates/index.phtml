@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <section>
+        <table class="standard-table">
+            <caption><img src="images/logo.png" alt="Logo" /> Todo List</caption>
+
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Goal</th>
+                    <th>End date</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <?php  for ($i = 0; $i < count($tasks); ++$i) {
+     ?>
+                    <?php $task = $tasks[$i]; ?>
+                    <tr id="row_<?=$task['id']?>" >
+                        <td><?= $task['title'] ?></td>
+                        <td><?= $task['goal']   ?></td>
+                        <td><?= $task['end_date'] ?></td>
+                        <td onclick="updateTask(<?= $task['id'] ?>)">
+                          <a class="update btn btn-primary"
+                          href="index.php?action=update&id=<?=$task['id']?>&title=<?=$task['title']?>&goal=<?=$task['goal']?>&end_date=<?=$task['end_date']?>">
+                          <i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        </td>
+
+                          <td onclick="delete(<?= $task['id'] ?>)"><a class="delete btn btn-danger" href="index.php?action=delete&id=<?=$task['id']?>">
+                            <i class="fa fa-times" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+
+                <?php
+
+ } ?>
+            </tbody>
+        </table>
+
+        <form id="formInsert" action="index.php" method="post">
+          <input type="text" name="title">
+          <input type="text" name="goal">
+          <input type="date" name="date">
+          <input type="submit" value="New task">
+        </form>
+
+    </section>
+
+
+    <script src="js/index.js" charset="utf-8"></script>
+</body>
+</html>

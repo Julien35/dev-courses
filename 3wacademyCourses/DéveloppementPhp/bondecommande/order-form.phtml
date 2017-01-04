@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="order-form.css">
+    <title>Order form</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>Bons de commande</h1>
+
+      <a href="./">Retourner à l'accueil</a>
+
+    </header>
+
+    <section class="order-form-customer">
+      <h2><?=$customer['customerName']; ?></h2>
+      <h3><?php
+      echo $customer['contactFirstName'].' '.$customer['contactLastName']; ?></h3>
+      <p>
+        <?= $customer['addressLine1']  ?>
+      </p>
+      <p>
+        <?= $customer['addressLine2']  ?>
+      </p>
+      <p>
+        <?= $customer['city']  ?>
+      </p>
+    </section>
+
+     <table class="standard-table">
+         <caption>Order Details <?= $orderDetails[0]['orderNumber']; ?></caption>
+         <thead>
+             <tr>
+                 <th>Product Name</th>
+                 <th>Price Each</th>
+                 <th>quantity Ordered</th>
+                 <th>Total Price</th>
+             </tr>
+         </thead>
+
+         <tbody>
+           <?php        $priceTotalHT = 0;
+                        $priceTotalTTC = 0;
+                        $priceTotalTVA = 0; ?>
+
+             <?php  for ($i = 0; $i < count($orderDetails); ++$i) {
+     ?>
+                 <?php $order = $orderDetails[$i]; ?>
+                 <tr>
+                     <td><?= $order['productName']   ?></td>
+                     <td><?= $order['priceEach'].' $'?></td>
+                     <td><?= $order['quantityOrdered']?></td>
+                     <td><?= $order['priceEach'] * $order['quantityOrdered'].' $'?></td>
+                 </tr>
+             <?php
+
+            $priceTotalHT += $order['priceEach'] * $order['quantityOrdered'];
+ } ?>
+            <?php
+
+            $priceTotalTTC = $priceTotalHT + $priceTotalHT * 0.20;
+            $priceTotalTVA = $priceTotalTTC - $priceTotalHT;
+             ?>
+                 <tr>
+                   <td></td>
+                    <td></td>
+                    <td>Montant HT</td>
+                    <td><?= round($priceTotalHT, 2).' $'?></td>
+                 </tr>
+                 <tr>
+                   <td></td>
+                    <td></td>
+                    <td>TVA( 20% )</td>
+                    <td><?= round($priceTotalTVA, 2).' $' ?></td>
+                 </tr>
+                 <tr>
+                   <td></td>
+                    <td></td>
+                    <td>Montant TTC</td>
+                    <td><?= round($priceTotalTTC, 2).' $' ?></td>
+                 </tr>
+
+         </tbody>
+     </table>
+
+  </body>
+</html>

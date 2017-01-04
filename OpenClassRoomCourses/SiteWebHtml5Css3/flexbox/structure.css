@@ -1,0 +1,14 @@
+h1 {
+    background-color: green;
+    width: auto;
+}
+p {
+    width: 350px;
+    /* On a indiqué une largeur (obligatoire) */
+    margin: auto;
+    /* On peut donc demander à ce que le bloc soit centré avec auto */
+    border: 1px solid black;
+    text-align: justify;
+    padding: 12px;
+    margin-bottom: 20px;
+}

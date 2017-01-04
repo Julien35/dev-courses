@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="vmthis">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head
+             content must come *after* these tags -->
+
+    <title>Vm this</title>
+
+    <!-- Bootstrap -->
+    <!-- build:css styles/main.css -->
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <div ng-controller="MainController as vm">
+      <p>
+        TEST vm = this : vm.value = {{vm.value}}
+      </p>
+
+      <!-- <h1>{{ vm.fiveDay.city_name }}</h1> -->
+
+    </div>
+
+    <!-- build:js scripts/main.js -->
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/forecast.js"></script>
+
+    <!-- Directives -->
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    /* Les bordures du tableau seront collées (plus joli) */
+}
+.border {
+    border: 1px solid black;
+}
+.fa-android {
+    font-size: 5100;
+}
+.player, .grass {
+    background-size: contain;
+}
+.player {
+    /*background-image: url('../img/mario.jpg');*/
+}
+.grass {
+    background-image: url('../img/grass.jpg');
+}
+img {
+  width: 90%;
+}

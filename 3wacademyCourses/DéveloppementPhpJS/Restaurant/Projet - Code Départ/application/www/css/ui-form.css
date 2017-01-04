@@ -1,0 +1,99 @@
+/*
+ * Styles des formulaires
+ */
+
+.generic-form .error-message
+{
+    /* structure */
+    margin: 2em 0;
+    padding: 0.5em 1em;
+
+    /* presentation */
+    background-color: rgba(255, 102, 51, 0.5);
+    border: 2px solid #FF3300;
+    border-radius: 6px;
+    color: white;
+}
+.generic-form .error-message h3
+{
+    /* structure */
+    margin-top: 0;
+
+    /* presentation */
+    color: #FF3300;
+}
+.generic-form .error-message h3 em
+{
+    color: red;
+    font-style: normal;
+}
+.generic-form .no-left-label
+{
+    margin-left: 180px; /* pour aligner avec le label */
+}
+.generic-form input[type="password"],
+.generic-form input[type="text"],
+.generic-form select,
+.generic-form textarea
+{
+    /* structure */
+    padding: 2px;
+
+    /* presentation */
+    border: 1px solid grey;
+    transition: background-color 0.33s;
+}
+.generic-form input[type="password"],
+.generic-form input[type="text"],
+.generic-form textarea
+{
+    width: 20em;
+}
+.generic-form input[type="password"]:focus,
+.generic-form input[type="text"]:focus,
+.generic-form select:focus,
+.generic-form textarea:focus
+{
+    background-color: #D0FFFF;
+}
+.generic-form > ul:last-child
+{
+    margin-top: 2em;
+}
+.generic-form ul li
+{
+    margin: 1em 0;
+}
+.generic-form ul li label
+{
+    display: inline-block;
+}
+.generic-form ul li label.textarea
+{
+    vertical-align: top;
+}
+.generic-form ul li label:not(.no-width)
+{
+    width: 175px;
+}
+.generic-form ul li label.full-width
+{
+    width: 100%;
+}
+.generic-form input.money,
+.generic-form input.zip-code
+{
+    width: 55px; /* 5 caractères */
+}
+.generic-form input.quantity
+{
+    width: 35px; /* 3 caractères */
+}
+.generic-form input.phone
+{
+    width: 100px; /* 10 caractères */
+}
+.generic-form textarea
+{
+    resize: none;
+}

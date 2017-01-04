@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="order-form.css">
+</head>
+<body>
+    <section>
+        <table class="standard-table">
+            <caption>Liste des commandes</caption>
+            <thead>
+                <tr>
+                    <th>Commande</th>
+                    <th>Date de la commande</th>
+                    <th>Date de livraison</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php  for ($i = 0; $i < count($orders); ++$i) {
+     ?>
+                    <?php $order = $orders[$i]; ?>
+                    <tr>
+                        <td>
+                            <a href="order-form.php?orderNumber=<?=
+                             $order['orderNumber']
+                             ?>"><?= $order['orderNumber'] ?></a>
+                        </td>
+                        <td><?= $order['orderDate']   ?></td>
+                        <td><?= $order['shippedDate'] ?></td>
+                        <td><?= $order['status']      ?></td>
+                    </tr>
+
+                <?php
+
+ } ?>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

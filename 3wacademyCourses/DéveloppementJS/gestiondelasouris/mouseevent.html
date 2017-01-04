@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <style media="screen">
+            div {
+                background-color: limegreen;
+                border-radius: 30px;
+                width: 400px;
+                height: 300px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="test">
+            <!-- <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul> -->
+        </div>
+
+        <script>
+            var test = document.getElementById("test");
+
+            // this handler will be executed only once when the cursor moves over the unordered list
+            test.addEventListener("mouseenter", function(event) {
+                // highlight the mouseenter target
+                event.target.style.backgroundColor = "purple";
+
+                // reset the color after a short delay
+                setTimeout(function() {
+                    event.target.style.backgroundColor = "";
+                }, 500);
+            }, false);
+
+            // this handler will be executed every time the cursor is moved over a different list item
+            test.addEventListener("mouseover", function(event) {
+                // highlight the mouseover target
+                event.target.style.backgroundColor = "orange";
+
+                // reset the color after a short delay
+                setTimeout(function() {
+                    event.target.style.backgroundColor = "";
+                }, 500);
+            }, false);
+        </script>
+
+    </body>
+</html>

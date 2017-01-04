@@ -1,0 +1,120 @@
+Typo
+
+La typographie – souvent abrégé en typo – désigne les différents procédés de
+composition et d’impression utilisant des caractères et des formes en relief,
+ainsi que l’art et la manière d’utiliser les différents types de caractères
+dans un but esthétique et pratique.
+
+
+Empattement
+
+En typographie, les empattements sont les petites extensions qui forment la
+terminaison des caractères dans certaines polices d'écriture dites polices «
+sérif ». Une diagonale forme avec son empattement un angle appelé angle
+d'empattement, caractéristique d'une police.
+
+
+Tiret
+
+Le tiret est un signe de ponctuation. Il ne doit pas être confondu avec le
+trait d’union. Il existe trois types de tirets, en fonction de leur longueur :
+le tiret court, le tiret moyen et le tiret long.
+
+Tiret cadratin
+
+Il est utilisé en typographie française pour introduire les
+répliques des dialogues ; il est placé en début de ligne et suivi d’une espace.
+Il ne doit pas être employé en double des guillemets, car ces derniers ouvrent
+et ferment le dialogue Il sert également à encadrer les propositions incises
+– et exceptionnellement les éléments incident – dans la fonction de
+quasi-parenthèse avec une espace justifiante à l’extérieur et une espace
+insécable à l’intérieur. Il lui est souvent conféré une valeur littéraire par
+rapport à la parenthèse. Cependant, du fait que le cadratin inséré rompt le
+gris typographique ou la régularité de texte, de nombreux éditeurs lui
+préfèrent le tiret demi-cadratin.
+
+Tiret demi-cadratin
+
+Le tiret « demi-cadratin » ou « demi-tiret » est utilisé pour lister les
+énumérations, ainsi que pour séparer les intervalles – délimité par deux
+espaces fines insécables – surtout dans la typographie anglaise, et dans la
+française lorsque les bornes de l’intervalle sont composées.  Celui-ci est
+aussi utilisé en typographie française pour introduire les répliques des
+dialogues ; il est placé en début de ligne et suivi d’une espace. Il ne doit
+pas être employé en double des guillemets, car ces derniers ouvrent et ferment
+le dialogue.
+
+Tiret court
+
+Le tiret court correspond principalement au trait
+d’union, mais avec quelques subtilités
+
+
+Césures
+
+En typographie et en orthographe, la coupure de mot, parfois appelée aussi
+césure, est l'opération qui consiste à couper par un tiret en fin de ligne un
+mot qui n’entrerait pas dans la justification. Cette coupure obéit à des règles
+bien précises qui varient d'une langue à l'autre. La plupart des logiciels de
+traitement de texte et de mise en page comportent un tel programme de césure.
+
+
+Veuves & orphelines
+
+En typographie, une ligne veuve est la dernière ligne d'un paragraphe
+apparaissant isolée en haut d'une page, et une orpheline est la première ligne
+d'un paragraphe apparaissant isolée en bas d'une page. On essaye généralement
+d'éviter l'apparition des veuves et des orphelines dans un texte typographié,
+sauf bien sûr dans la composition des dialogues ou des vers.
+
+On utilise souvent une formule mnémotechnique pour les différencier : « Une
+orpheline n'a pas de passé, une veuve n'a pas d'avenir » (l'orpheline est la
+première ligne d'un paragraphe, et la veuve la dernière). On peut aussi se
+souvenir que dans l’expression « Veuves et orphelines », la veuve est en
+premier (donc haut de page), l’orpheline en second (donc bas de page).
+
+
+Lettrines
+
+Une lettrine est une lettre initiale majuscule décorée placée en tête d'un
+texte et occupant une hauteur supérieure à la ligne courante. Les autres
+lettres du premier mot sont généralement en petites capitales.
+
+Comme lettre ornée, elle commence et décore une inscription, un paragraphe ou
+un chapitre d'ouvrage. Les moines du Moyen Âge cultivaient l'art de la lettrine
+dans leurs enluminures. Avec l'invention de l'imprimerie, la lettrine est
+devenue un ornement typographique. Elle peut provenir d’une vignette conçue à
+cet effet ou d’un caractère plus grand de la même police d'écriture ou d’une
+autre sorte.
+
+
+Le Français et la typographie
+
+En France, la typographie est encadrée par des règles regroupées dans le
+Lexique des règles typographiques en usage à l’Imprimerie nationale édité par
+l’Imprimerie nationale, ou le Code typographique édité par la Chambre
+typographique, réactualisé chaque année.  D’une manière similaire, les
+typographes suisses romands utilisent le Guide du typographe. En Belgique,
+c’est l’Institut belge de normalisation qui détient les documents officiels.
+Ces différents codes sont parfois contradictoires.
+
+
+Capitale accentuée
+
+Le code rappelle que le français est une langue accentuée et que la « tolérance
+», à l’époque des machines à écrire à rouleau, de ne pas accentuer les
+capitales, n’a aucune raison de s’étendre à la typographie : en français, les
+capitales doivent être accentuées lorsque la police dispose du caractère
+approprié. La plupart des polices utilisées en informatique comportent de tels
+accents, les fontes typographiques également.
+
+
+The long s
+
+The long, medial, or descending s (ſ) is a form of the minuscule letter s,
+which was formerly used where s occurred in the middle or at the beginning of a
+word (e.g “ſinfulneſs” “sinfulness”). The modern letterform was called the
+terminal, round, or short s.
+
+
+Source : Wikipedia

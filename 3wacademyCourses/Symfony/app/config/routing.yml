@@ -1,0 +1,8 @@
+oc_platform:
+    resource: "@OCPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# import routes from a controller directory
+post:
+    resource: "@OCPlatformBundle/Controller"
+    type:     annotation

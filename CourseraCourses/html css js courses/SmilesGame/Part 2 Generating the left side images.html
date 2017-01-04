@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Part 2 Generating the left side images</title>
+  <meta content="Julien" name="author">
+</head>
+
+<style>
+  img {
+    position: absolute;
+  }
+
+  div {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+  }
+
+  #rightSide {
+    left: 500px;
+    border-left: 1px solid black;
+  }
+
+  #rightSide {}
+</style>
+
+<body>
+
+  <h1>Matching Game</h1>
+  <p>Click on the extra smiling face on the left.</p>
+
+  <div id="leftSide"></div>
+
+  <div id="rightSide"></div>
+
+  <script>
+    var numberOfFaces = 5;
+    var theLeftSide = document.getElementById("leftSide");
+
+    function generateFaces() {
+      //Set of an new image to image object
+      var img = new Image();
+      img.src = "smile.png";
+
+      // get div & img sizes
+      var divHeight = theLeftSide.offsetHeight;
+      var imgHeight = img.height;
+      var divWidth = theLeftSide.offsetHeight;
+      var imgWidth = img.width;
+
+      // alert("divHeight = " + divHeight + " and imgHeight = " + imgHeight);
+
+      //Random top position of img
+      var top_position = Math.random() * (divHeight - imgHeight);
+      top_position = Math.floor(top_position);
+      //Random left position of img
+      var left_position = Math.random() * (divWidth - imgWidth);
+      left_position = Math.floor(left_position);
+      //debug
+      // alert("top_position = " + top_position + " and left_position = " + left_position);
+
+      //set of top and left attributes to img
+      img.style.top = top_position + "px";
+      img.style.left = left_position + "px";
+      //created image to the leftSide div
+      theLeftSide.appendChild(img);
+    }
+
+    //Call of generateFaces() function
+    for (var i = 0; i < numberOfFaces; i++) {
+      generateFaces();
+    }
+  </script>
+
+</body>
+
+</html>

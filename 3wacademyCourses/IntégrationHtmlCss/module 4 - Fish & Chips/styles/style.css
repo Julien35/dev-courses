@@ -1,0 +1,154 @@
+/*## CSS
+- Largeur limité entre 800px et 1100px
+- Largeur du bloc gauche : 69%
+- Largeur du bloc de droite : 30%
+- Utiliser une class pour limiter intelligemment le contenu
+- Taille de la police :
+    - par défaut : 1em
+    - titres :  2em
+- Police utilisés :
+    - "Slabo 27px"
+    arial, open 100*/
+
+* {
+  /*font-family: 'Slabo 27px', serif;*/
+}
+body {
+  background-image: url("../img/fond.png");
+}
+.container {
+  min-width: 800px;
+  max-width: 1100px;
+  margin: 0 auto;
+  clear: both;
+}
+
+/* header */
+
+header {
+  margin-top: 5%;
+  background-color: #25b3b4;
+}
+.bandeau {
+  background-color: #25B3B4;
+  border-top: solid #1B9CA2;
+  border-bottom: solid #1B9CA2;
+}
+#navigation {
+  text-align: center;
+  padding-bottom: 2%;
+}
+#navigation li {
+  display: inline-block;
+  color: #fff;
+}
+#navigation a {
+  display: block;
+  padding: 4px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* main */
+
+main {
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* presentation */
+
+.title_gros {
+  font-family: 'Slabo 27px', serif;
+  font-size: 2em;
+  text-align: center;
+}
+.title_moyen {
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+#presentation {
+  width: 70%;
+  margin: 0 auto 2em;
+}
+.welcome p {
+  padding: 5px;
+}
+.welcome h2 {
+  padding: 2% 0 2%;
+}
+
+/* recipe */
+
+#recipe {
+  background-color: #B6DFDD;
+  float: left;
+  width: 69%;
+  padding: 0 0 2%;
+  text-align: left;
+}
+#recipe h2 {
+  padding: 1%;
+  color: #1B9CA2;
+}
+#recipe h3 {
+  padding: 2%;
+}
+#recipe h3 i {
+  color: #1B9CA2;
+}
+#recipe img {
+  float: left;
+  border-radius: 50%;
+  padding: 5%;
+}
+#recipe a {
+  text-decoration: none;
+  background-color: #1B9CA2;
+  color: #fff;
+  padding: 3%;
+  float: right;
+}
+#recipe article {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  padding: 0 2%;
+}
+#recipe p {
+  padding: 6%;
+  line-height: 150%;
+}
+
+/* aside */
+
+aside {
+  background-color: #25B3B4;
+  float: right;
+  width: 29%;
+  color: #fff;
+  border: solid 5px #1B9CA2;
+}
+aside img {
+  float: right;
+  position: relative;
+  left: 50px;
+  bottom: 45px;
+}
+aside h3 {
+  padding: 5%;
+}
+aside h4 {
+  padding: 5%;
+}
+aside p {
+  padding: 5%;
+  line-height: 150%;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  padding-top: 70px;
+}

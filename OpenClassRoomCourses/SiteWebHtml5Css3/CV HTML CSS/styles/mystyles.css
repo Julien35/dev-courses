@@ -1,0 +1,109 @@
+@font-face {
+    /* Définition d'une nouvelle police nommée LearningCurveProRegular */
+    font-family: 'LearningCurveProRegular';
+    src: url('LearningCurve_OT-webfont.eot');
+    src: url('LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'), url('LearningCurve_OT-webfont.woff') format('woff'), url('LearningCurve_OT-webfont.ttf') format('truetype'), url('LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');
+}
+
+/* Utilisation de la police qu'on vient de définir sur les titres */
+
+h1, h2 {
+    font-family: 'LearningCurveProRegular', Arial, serif;
+}
+h2 {
+    color: #800000;
+}
+
+/* bloc principal */
+
+body {
+    border: 1px solid #666666;
+    border-radius: 4px;
+    padding: 1px;
+    padding-bottom: 10px;
+    /*background-image: url("../images/bobBackground.jpg");*/
+    display: flex;
+}
+
+/*media query sur reponsive design*/
+
+@media all and (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1024px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .experience {
+      padding: 20px;
+  }
+  .competence {
+      padding: 20px;
+  }
+  .formation {
+      text-align: justify;
+      box-shadow: 8px 8px 0px #aaa;
+      padding: 20px;
+  }
+}
+
+
+/* sidebar / liseret */
+
+.sidebar {
+    width: 350px;
+    height: auto;
+    background-color: black;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.header_title {
+    flex-grow: 1;
+    /*background-color: #e3df2c;*/
+}
+#photo {
+    /*background-color: #f4b7b7;*/
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 2px;
+    transition: 0.3s;
+}
+#photo:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/* contenu principal */
+
+.mainContainer {
+    display: flex;
+    justify-content: space-around;
+}
+.experience {
+    flex: 1;
+    /*background-color: #e3df2c;*/
+    padding: 20px;
+}
+.competence {
+    flex: 1;
+    /*background-color: #f4b7b7;*/
+    padding: 20px;
+}
+.formation {
+    flex: 1;
+    /*background-color: #b66262;*/
+    text-align: justify;
+    box-shadow: 8px 8px 0px #aaa;
+    padding: 20px;
+}

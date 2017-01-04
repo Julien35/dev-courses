@@ -1,0 +1,50 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+
+a
+{
+    color: #7F3734;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+a:hover
+{
+    color: #FFCC5C;
+}
+
+body
+{
+    /* structure */
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 100%;
+    width: 80%;
+
+    /* presentation */
+    font-family: 'Open Sans', sans-serif;
+}
+
+html
+{
+    /* structure */
+    height: 100%;
+
+    /* presentation */
+    background-color: #F8FFF2;
+}
+
+h1
+{
+    color: #00968B;
+}
+
+.form-margin-input{
+  /* structure */
+  margin-left: 13em;
+}
+
+.form-margin-select
+{
+    /* structure */
+    margin-left: 4.7em;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+
+            {% if is_granted('ROLE_USER') %}
+            <a href="{{path('account_page')}}">account</a>
+            {% else %}
+            <a href="{{path('login')}}">login page</a>
+            {% endif %}
+            <a href="{{path('schedule')}}">schedule page</a>
+            <a href="{{ path('schedule', { 'token': '57e14f607303e' }) }}">schedule page with token</a>
+        </div>
+    </div>
+{% endblock %}

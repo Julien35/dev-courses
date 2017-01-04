@@ -1,0 +1,31 @@
+body
+{
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+.hide
+{
+    display: none;
+}
+
+.rectangle
+{
+    /* structure */
+    height: 300px;
+    width: 400px;
+
+    /* presentation */
+    background-color: royalblue;
+    border-radius: 8px;
+    transition: background-color 0.8s;
+}
+.rectangle.important
+{
+    background-color: firebrick;
+}
+.rectangle.important.good
+{
+    background-color: limegreen;
+}

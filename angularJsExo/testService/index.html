@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>testService</title>
+
+    </head>
+    <body ng-app="testService"  ng-controller="NameController as nameCtrl">
+
+        <div>
+            <form name="userForm">
+                <label>Name:
+                    <input type="text" name="userName" ng-model="nameCtrl.name" ng-model-options="{ getterSetter: true }"/>
+                </label>
+            </form>
+
+            <pre>user.name = <span ng-bind="nameCtrl.name()"></span></pre>
+
+        </div>
+
+        <div>
+          <span ng-bind="nameCtrl._name"></span>
+          <span ng-bind="nameCtrl.IsPlaying"></span>
+        </div>
+
+        <div class="">
+          <button type="button" name="button" ng-click="nameCtrl.startStop()">
+              <span ng-show="nameCtrl.IsPlaying">
+                  Stop</span>
+              <span ng-hide="nameCtrl.IsPlaying">
+                  Start</span>
+          </button>
+        </div>
+
+        <!-- script -->
+        <script src="angular.js"></script>
+        <script src="app.module.js"></script>
+        <!-- controllers -->
+        <script src="name.controller.js"></script>
+        <script src="testService.service.js"></script>
+
+    </body>
+</html>

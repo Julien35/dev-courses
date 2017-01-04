@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Dating WebSite</title>
+  <meta name="author" content="Julien Berthau">
+</head>
+
+<body>
+
+  <h1>Please Enter Your Details For Our Dating WebSite!</h1>
+
+  <form method="get" enctype="multipart/form-data" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+    <fieldset>
+      <legend>Your Face</legend>
+      <label for="avatar">Your image:</label>
+      <input type="file" id="avatar" name="avatar" required>
+      <br>
+      <label for="preview:">Image preview:</label>
+      <img src="face" id="preview" alt="face">
+    </fieldset>
+
+    <fieldset>
+      <legend>Your general details</legend>
+      <label for="name">Name:</label>
+      <input type="text" value="Your full name" required>
+      <br>
+      <label for="Gender">Gender:</label>
+      <input type="radio" name="gender" value="male" checked required> Male
+      <input type="radio" name="gender" value="female" required> Female
+      <br>
+      <label for="age">Your age:</label>
+      <input type="number" value="18" id="age" name="age" required>
+      <br>
+      <label for="Date of birth">Date of birth:</label>
+      <input type="date" value="dd/mm/yyyy" id="birthday" name="birthday">
+      <br>
+      <label for="color">Favorite color:</label>
+      <input type="color" id="color" name="color">
+      <br>
+      <label for="Which country">Which country:</label>
+      <select name="country">
+        <option value="">no selection</option>
+        <option value="France">France</option>
+        <option value="Spain">Spain</option>
+        <option value="Germany">Germany</option>
+        <option value="Hong Kong">Hong Kong</option>
+        <option value="United Kingdom">United Kingdom</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your indicators</legend>
+      <label for="Height">Height:</label>
+      <div class="slider">
+        <span>Short</span>
+        <input type="range" min="0" max="100" step="5" value="50" id="height" name="height">
+        <span>Tall</span>
+      </div>
+      <br>
+
+      <label for="Salary">Salary:</label>
+      <div class="slider">
+        <span>Poor</span>
+        <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">
+        <span>Rich</span>
+      </div>
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="email">Email:</label>
+      <input type="email" required>
+      <br>
+      <label for="mobile">Mobile:</label>
+      <input type="tel">
+      <br>
+      <label for="address">Address:</label>
+      <textarea rows="1" cols="30">
+      </textarea>
+      <br>
+      <label for="contact">Method to contact you:</label>
+      <input type="checkbox" name="contact" value="email">Email
+      <input type="checkbox" name="contact" value="whatsapp">Whatsapp
+      <input type="checkbox" name="contact" value="in-app chat">In-app chat
+    </fieldset>
+
+
+    <input type="submit" value="Submit!">
+  </form>
+
+</body>
+
+</html>

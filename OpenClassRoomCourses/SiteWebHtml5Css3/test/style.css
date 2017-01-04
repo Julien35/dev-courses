@@ -1,0 +1,58 @@
+@font-face {
+    /* Définition d'une nouvelle police nommée LearningCurveProRegular */
+    font-family: 'LearningCurveProRegular';
+    src: url('LearningCurve_OT-webfont.eot');
+    src: url('LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'), url('LearningCurve_OT-webfont.woff') format('woff'), url('LearningCurve_OT-webfont.ttf') format('truetype'), url('LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');
+}
+
+
+/* Paragraphes en bleu par défaut */
+p
+{
+    color: blue;
+}
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 1024px)
+{
+    p
+    {
+        color: red;
+        background-color: black;
+        font-size: 1.2em;
+    }
+}
+
+h1
+/* Utilisation de la police qu'on vient de définir sur les titres */
+
+{
+    font-family: 'LearningCurveProRegular', Arial, serif;
+}
+
+.introduction {
+    color: blue;
+}
+body {
+    background: url('neige.png');
+}
+/*p {
+    background-color: black;
+    color: white;
+    opacity: 0.3;
+}*/
+a
+/* Liens par défaut (non survolés) */
+
+{
+    text-decoration: none;
+    color: red;
+    font-style: italic;
+}
+a:hover
+/* Apparence au survol des liens */
+
+{
+    text-decoration: underline;
+    color: green;
+}

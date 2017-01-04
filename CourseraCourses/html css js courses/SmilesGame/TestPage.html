@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    img {
+      position: absolute;
+    }
+    /*here i tried to use 500px in the style rules for the div but the division was noticeably off centre, therefore, i used 50% instead*/
+
+    div {
+      position: absolute;
+      width: 50%;
+      height: 50%
+    }
+
+    #rightSide {
+      left: 50%;
+      border-left: 1px solid black
+    }
+  </style>
+
+</head>
+
+<body onload="generateFaces()">
+
+  <h1 id="TitleOfGame">Matching Game!</h1>
+  <p id="Intructions">To play the game, find the extra smiley on the left hand side and click on it :)</p>
+  <div id="leftSide">
+    <!--this div node will display all of the faces on the left side of the screen
+        faces are dynamically added using javascript-->
+  </div>
+  <div id="rightSide">
+    <!--this div node will display all of the faces on the right side of the screen
+        cloneNode(true) is used to copy the faces to the right side, and the last child of this branch is deleted, such that there are more faces on the left side.
+    -->
+  </div>
+  <script>
+    //this part of the script generates 5 faces randomly placed on the left side of the screen
+    var numberOfFaces = 5;
+    var theLeftSide = document.getElementById("leftSide");
+    var i = 0;
+    var theBody = document.getElementsByTagName("body")[0];
+
+    function generateFaces() {
+      while (i < numberOfFaces) {
+        var random_top = ((Math.random() * 400));
+        var random_left = ((Math.random() * 400));
+        var random_top = Math.floor(random_top);
+        var random_left = Math.floor(random_left);
+        var img = document.createElement('img');
+        img.src = "smile.png";
+        img.style.left = random_left + "px";
+        img.style.top = random_top + "px";
+        theLeftSide.appendChild(img);
+        i += 1;
+        //this part of the script clones those 5 faces onto the right side of the page.
+        var theRightSide = document.getElementById("rightSide");
+        var leftSideImages = theLeftSide.cloneNode(true);
+      }
+      theRightSide.appendChild(leftSideImages);
+      leftSideImages = leftSideImages.removeChild(leftSideImages.lastChild);
+      
+      theLeftSide.lastChild.onclick = function nextLevel(event) {
+        event.stopPropagation();
+        while (theLeftSide.firstChild) {
+          theLeftSide.removeChild(theLeftSide.firstChild);
+        }
+        while (theRightSide.firstChild) {
+          theRightSide.removeChild(theRightSide.firstChild);
+        }
+        numberOfFaces++; //OK SO THE PROBLEM IS THAT WHEN IT GOES TO THE NEXT LEVEL, IT RESETS numberOfFaces to 5(or whatever the number that is set here) for some reason!
+        numberOfFaces++; //adding manually like this gives the same result as x+=5. ie. the variable is not being updated, it is being reset.
+        numberOfFaces++;
+        numberOfFaces++;
+        generateFaces();
+      };
+      theBody.onclick = function youFail() {
+        alert("Game Over!");
+        theBody.onclick = null;
+        theLeftSide.lastChild.onclick = null;
+      };
+    };
+  </script>
+</body>
+
+</html>

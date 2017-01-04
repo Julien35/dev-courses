@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+#fileContent {
+    margin-top: 100px;
+}
+
+#fileContent span {
+    padding: 3px 6px;
+    border: 1px solid #888;
+    background-color: #DDD;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}

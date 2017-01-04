@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="name" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" media="screen and (max-width: 640px)" href="smallscreen.css" type="text/css"/>
+
+        <title></title>
+        <style media="screen">
+
+            @media screen and (max-width:360px) {
+                p {
+                    background-color: blue;
+                    color: #9e97ab;
+                }
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <title>La kiwiParty, le web pulpeux</title>
+        <desc>Un logo animé en SVG</desc>
+
+        <svg width="400px" height="300px" xml:lang="fr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <rect x="25px" y="25px" width="150" height="100"/>
+            <rect x="200px" y="75px" width="150" height="100"/>
+
+            <circle cx="110" cy="110" r="50"/>
+
+            <circle cx="100" cy="100" r="80" stroke="#4b6c0b" fill="#9dcc41"/>
+            <circle cx="150" cy="100" r="80" stroke="#ff6000" fill="orange" fill-opacity="0.5"/>
+
+            <circle cx="300" cy="100" r="40" stroke="#4b6c0b" stroke-width="20" fill="transparent" stroke-opacity="0.5"/>
+            <circle cx="340" cy="100" r="40" stroke="#4b6c0b" stroke-width="20" fill="transparent" stroke-opacity="0.5"/>
+
+            <rect width="100" height="50">
+                <animate attributeName="width" attributeType="XML" fill="freeze" from="0" to="300" begin="0s" dur="3s"/>
+            </rect>
+
+        </svg>
+
+    </body>
+
+</html>

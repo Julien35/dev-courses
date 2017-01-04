@@ -1,0 +1,94 @@
+/*  VISUALISATION DES BLOCS  */
+
+div, header, section, article, aside, nav {
+	border: 1px dashed rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.05);
+}
+
+.clear {
+	border: 1px dashed red;
+}
+
+/*GLOBAL */
+body {
+	font-family: verdana, sans-serif;
+	margin: 0;
+	color: #666;
+	background-image: url(../img/fond.png);
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	background-color: #B8CB21;
+	padding: 10px;
+}
+
+header, main {
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+/* HEADER */
+header {
+	background-color: #B8CB21;
+	padding: 25px;
+}
+
+header nav {
+	float: right;
+	padding: 50px 0;
+}
+
+header nav a {
+	color: #2C4726;
+	text-transform: uppercase;
+	padding: 10px;
+	margin: 15px;
+	font-family: "Oswald", sans-serif;
+	font-size: 1.3em;
+}
+
+/* MAIN */
+h2 {
+	font-family: "Oswald", sans-serif;
+	color: #B8CB21;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: "Oswald", sans-serif;
+	color: #B8CB21;
+	font-weight: normal;
+	font-size: 1.4em;
+}
+
+img {
+	max-width: 100%;
+}
+
+main {
+	background-color: white;
+	padding: 25px;
+}
+
+main a {
+	float: right;
+}
+
+article img {
+	float: left;
+	width: 200px;
+	margin-right: 10px;
+}
+
+/* FOOTER */
+footer {
+	padding: 25px;
+	text-align: center;
+}

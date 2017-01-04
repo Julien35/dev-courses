@@ -1,0 +1,17 @@
+{
+  "name": "vmthis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular-mocks": "^1.5.2",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julien",
+  "license": "MIT"
+}

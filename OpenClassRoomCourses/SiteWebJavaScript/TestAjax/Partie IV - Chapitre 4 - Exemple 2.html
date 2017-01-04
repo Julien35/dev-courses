@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://learn.sdlm.be/js/part4/chap4/ex2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Partie IV - Chapitre 4 - Exemple 2</title>
+  </head>
+
+  <body>
+
+    <script>
+    function sendDSL() {
+        var scriptElement = document.createElement('script');
+            scriptElement.src = 'dsl_script.php?nick=' + prompt('Quel est votre pseudo ?');
+
+        document.body.appendChild(scriptElement);
+    }
+
+    function receiveMessage(message) {
+        alert(message);
+    }
+    </script>
+
+    <p><button type="button" onclick="sendDSL()">Exécuter le script</button></p>
+
+  
+<script src="./Partie IV - Chapitre 4 - Exemple 2_files/dsl_script.php"></script><script src="./Partie IV - Chapitre 4 - Exemple 2_files/dsl_script.php"></script></body></html>

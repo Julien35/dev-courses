@@ -1,0 +1,130 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+  <section class="container">
+
+    <header class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/assets/images/logo.jpg" height="30" width="41">
+      </a>
+    </header>
+
+    <article id="navbar" class="navbar-collapse collapse">
+
+    <?php if (self::isAdmin()) { ?>
+            <ul class="nav navbar-nav">
+                <li <?php if(!strcasecmp($this->data['activeLink'],'client')) {echo "class=\"active\"";}?>>
+                    <a href="/admin/clients">
+                      <i class="fa fa-users" aria-hidden="true"></i>
+                        Clients</a>
+                </li>
+                <li <?php if(!strcasecmp($this->data['activeLink'],'bill')) {echo "class=\"active\"";}?>>
+                    <a href="/admin/bills">
+                      <i class="fa fa-file" aria-hidden="true"></i>
+                        Bills</a>
+                </li>
+                <li <?php if(!strcasecmp($this->data['activeLink'],'article')) {echo "class=\"active\"";}?>>
+                    <a href="/admin/articles">
+                      <i class="fa fa-cubes" aria-hidden="true"></i>
+                       Articles</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a type="button" id="logoutbutton" href="/admin/logout">
+                  <!-- data-toggle="modal" data-target="#loginModal"-->
+                  <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                </li>
+            </ul>
+
+  <?php } elseif (self::isUser()) { ?>
+
+            <ul class="nav navbar-nav">
+              <li <?php if(!strcasecmp($this->data['activeLink'],'client')) {echo "class=\"active\"";}?>>
+                  <a href="/user/client">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                      Profil</a>
+              </li>
+              <li <?php if(!strcasecmp($this->data['activeLink'],'bill')) {echo "class=\"active\"";}?>>
+                  <a href="/user/bills">
+                    <i class="fa fa-file" aria-hidden="true"></i>
+                      Bills</a>
+              </li>
+                <li <?php if(!strcasecmp($this->data['activeLink'],'article')) {echo "class=\"active\"";}?>>
+                    <a href="/user/articles">
+                      <i class="fa fa-cubes" aria-hidden="true"></i>
+                       Articles</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a type="button" id="logoutbutton" href="/user/logout">
+                  <!-- data-toggle="modal" data-target="#loginModal"-->
+                  <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+              </li>
+              <li>
+                <?php include VIEWS_PATH.'commons/cart.phtml'; ?>
+              </li>
+            </ul>
+
+  <?php } else { ?>
+
+      <ul class="nav navbar-nav">
+        <li <?php if (strcasecmp($this->data['activeLink'], 'home') === 0) {
+    echo 'class="active"';
+}?>>
+          <a href="/">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+        </li>
+        <li>
+            <a href="aboutus.html">
+              <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
+        </li>
+        <li>
+            <a href="contactus.html">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</a>
+        </li>
+        <li <?php if (strcasecmp($this->data['activeLink'], 'article') === 0) {
+    echo 'class="active"';
+}?>>
+            <a href="articles">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+            Articles</a>
+        </li>
+      </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a input="button" id="loginbutton" class="btn">
+            <!-- data-toggle="modal" data-target="#loginModal"-->
+            <i class="glyphicon glyphicon-log-in"></i> Login</a>
+          </li>
+          <li>
+            <a input="button" id="registerbutton" class="btn">
+            <!-- data-toggle="modal" data-target="#loginModal"-->
+            <i class="glyphicon glyphicon-th-list"></i> Register</a>
+          </li>
+
+          <li>
+            <?php include VIEWS_PATH.'commons/cart.phtml'; ?>
+          </li>
+        </ul>
+
+
+
+  <?php } ?>
+
+      </article>
+</section>
+</nav>
+
+  <?php include VIEWS_PATH.'commons/sign_in_modal.phtml'; ?>
+  <?php include VIEWS_PATH.'commons/sign_up_modal.phtml'; ?>
+  <?php include VIEWS_PATH.'commons/log_out.phtml'; ?>

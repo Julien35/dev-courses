@@ -1,0 +1,81 @@
+/* GLOBAL */
+
+
+/* HEADER */
+
+.banner div {
+  display: inline-block;
+  position: absolute;
+  top: 14%;
+}
+
+/* NAV */
+
+nav ul:first-child {
+  text-align: center;
+}
+
+/* MENU */
+
+h1, h2 {
+  font-size: 1.2em;
+  color: grey;
+  font-style: italic;
+}
+h2 {}
+h3 a {
+  font-size: 1.2em;
+  padding: 4%;
+  opacity: 0.8;
+}
+.mainmenu {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding: 2%;
+}
+.mainmenu:hover {
+  background-color: #2CBCD6;
+}
+.mainmenu a {
+  color: #2CBCD6;
+  text-decoration: none;
+  /*position: absolute;*/
+}
+.mainmenu:hover a {
+  color: white;
+}
+
+/* SOUSMENU */
+
+.sousmenu {
+  display: none;
+}
+.sousmenu a, h3 {
+  color: white;
+  text-decoration: none;
+}
+.sousmenu h3 a {
+  font-size: 1.5em;
+}
+.mainmenu:hover .sousmenu {
+  background-color: #2CBCD6;
+  display: block;
+  position: absolute;
+  top: 221px;
+  left: 0;
+  width: 100%;
+}
+.mainmenu:hover .sousmenu ul {
+  float: left;
+  width: 40%;
+  padding: 4%;
+}
+.mainmenu:hover .sousmenu h3, .mainmenu:hover .sousmenu li {
+  padding: 2%;
+}
+
+/* MAIN */
+
+
+/* FOOTER */

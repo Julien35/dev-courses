@@ -1,0 +1,44 @@
+/*Le nombre de photos sélectionnées doit s'afficher
+en rouge et en gras.
+Les photos doivent s'afficher les unes à côté des autres
+sur une largeur de 800 pixels, sans les puces,
+avec une marge de 1em et un padding de 0.5em.
+Au survol d'un élément de la liste photo-list,
+la couleur de fond devient grise (silver).
+Quand un élément de la liste photo-list à la classe
+selected, la couleur de fond devient verte (forestgreeen).
+Le changement de couleur de fond d'un élément de
+la liste photo-list doit s'animer.*/
+
+.container {
+    width: 80%;
+    /*height: 50%;*/
+    margin: 0 auto;
+}
+body {
+    /*margin: 0 auto;*/
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 2%;
+}
+ul {
+    width: 800px;
+}
+li {
+    display: inline-block;
+}
+img {
+    margin: 1em;
+    padding: 0.5em;
+}
+#total span {
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+}
+.selected {
+    background-color: forestgreen;
+    border-radius: 15px;
+}

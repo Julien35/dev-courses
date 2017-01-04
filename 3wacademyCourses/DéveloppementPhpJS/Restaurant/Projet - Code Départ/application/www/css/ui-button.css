@@ -1,0 +1,59 @@
+/*
+ * Styles des boutons
+ */
+
+.button
+{
+    /* structure */
+    display: inline-block;
+    padding: 0.5em 1em;
+
+    /* presentation */
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    line-height: 1.5em;
+    text-decoration: none;
+    transition: background-color 0.25s, box-shadow 0.25s;
+}
+.button[disabled],
+.button[disabled]:hover
+{
+    background-color: silver;
+    box-shadow: none;
+    color: grey;
+}
+.button + .button
+{
+    margin-left: 1em;
+}
+
+.button-cancel
+{
+    background-color: #FF3300;
+    color: white;
+}
+.button-cancel:hover
+{
+    background-color: #FF6633;
+    box-shadow: 0 0 4px 2px rgba(255, 102, 51, 0.5);
+    color: white;
+}
+
+.button-primary
+{
+    background-color: #339966;
+    color: white;
+}
+.button-primary:hover
+{
+    background-color: #66CC99;
+    box-shadow: 0 0 4px 2px rgba(102, 204, 153, 0.5);
+    color: white;
+}
+
+.button:active
+{
+    box-shadow: none;
+}

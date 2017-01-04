@@ -1,0 +1,43 @@
+<section class="row">
+    <?php
+    // var_dump($this->data);
+    $client = $this->data['client'];
+    // var_dump($client);
+    ?>
+
+<h1>fiche client : <?=$client['firstname']?> <?=$client['lastname']?></h1>
+
+  <div class="table-responsive">
+
+    <?php if ($this->data['client'] != null): ?>
+
+    <table class="table table-striped table-hover">
+      <thead class="thead-default">
+        <tr>
+          <th>lastname</th>
+          <th>firstname</th>
+          <th>address</th>
+          <th>siret</th>
+          <th>phone</th>
+          <th>mail</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+          <?php $client = $this->data['client']; ?>
+          <tr>
+            <td><?= $client['lastname'] ?></td>
+            <td><?= $client['firstname'] ?></td>
+            <td><?= $client['address'] ?></td>
+            <td><?= $client['siret'] ?></td>
+            <td><?= $client['phone'] ?></td>
+            <td><?= $client['mail'] ?></td>
+          </tr>
+      </tbody>
+    </table>
+    <?php endif ?>
+
+  </div>
+</section>

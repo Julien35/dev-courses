@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<body>
+   <button id="btn1">Click me</button>
+   <script>
+      var count = 0;
+      function countClick() {
+         count++;
+      }
+
+      function handler1() {
+         alert("Handler 1 has been triggered " + count + " times!");
+      }
+
+      function handler2() {
+         alert("Handler 2 has been triggered " + count + " times!");
+         if(count == 3) {
+            btn1.removeEventListener("click", handler1);
+         }
+      }
+
+      var btn1 = document.getElementById("btn1");
+      btn1.addEventListener("click", countClick);
+      btn1.addEventListener("click", handler1);
+      btn1.addEventListener("click", handler2);
+   </script>
+</body>
+</html>

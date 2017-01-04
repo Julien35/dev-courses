@@ -1,0 +1,72 @@
+/*### CSS
+
+* Les boutons de la barre d'outil sont disposés
+les uns à côté des autres, utiliser Font Awesome
+ pour les icônes des boutons.
+* Utiliser la font web *Open Sans* de chez Google
+ pour l'ensemble de l'exercice.*/
+
+
+/*GLOBAL */
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: "Open Sans";
+    background-image: url("../images/concrete_seamless.png");
+}
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header h1 {
+    color: #015770;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 2% 0;
+}
+#toolbar-toggle {
+    color: #2A8782;
+    text-decoration: none;
+}
+nav {
+    padding: 3% 3% 3% 5%;
+    text-align: center;
+}
+nav button {
+    margin-right: 1%;
+}
+
+/* MAIN */
+
+main {
+    text-align: right;
+}
+.slider {
+    color: #2A8782;
+    text-align: center;
+    transform: rotate(-3deg);
+}
+.slider img {
+    height: 26em;
+    width: 37em;
+    border: 14px solid white;
+    border-radius: 14px;
+    box-shadow: 10px 10px 5px 0px #656565;
+}
+.slider {
+  /*background-image: url("../images/1.jpg");*/
+}
+.slider figcaption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 20px;
+}
+.enabled {
+  color: blue;
+}

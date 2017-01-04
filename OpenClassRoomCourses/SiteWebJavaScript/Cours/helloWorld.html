@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+
+  <body>
+
+    <script>
+
+      // alert('Hello world!');
+      
+      (function() { // On utilise une IIFE pour « isoler » du code
+
+          text = 'Variable accessible !'; // Cette variable n'a jamais été déclarée et pourtant on lui attribue une valeur
+
+      })();
+
+      alert(text); // Affiche : « Variable accessible ! »
+    </script>
+
+  </body>
+</html>

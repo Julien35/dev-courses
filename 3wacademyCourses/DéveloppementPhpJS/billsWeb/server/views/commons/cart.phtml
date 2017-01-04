@@ -1,0 +1,38 @@
+<a class="cart-link btn" input="button">
+  <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Cart
+</a>
+
+<main class="cart">
+
+<?php
+// var_dump(MainController::getBasePath());
+$url = MainController::getBasePath() ."recap";
+ ?>
+
+<form class="" action=<?= $url ?> method="post">
+  <table class="table">
+    <thead class="thead-default">
+      <tr>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>sub Total</th>
+      </tr>
+    </thead>
+    <tbody class="cart-container"></tbody>
+  </table>
+
+  <p id="sub-total">
+    <strong>Total</strong>: <span id="total"></span>
+  </p>
+  <ul id="shopping-cart-actions">
+    <li>
+      <a class="btn btn-primary" type="button" id="empty-cart">Empty Cart</a>
+    </li>
+    <li>
+      <input class="btn btn-success" type="submit" value="purchase">
+    </li>
+  </ul>
+</form>
+
+</main>

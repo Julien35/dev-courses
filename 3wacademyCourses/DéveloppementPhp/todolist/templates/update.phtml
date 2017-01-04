@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Task</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>Task</h1>
+
+      <a href="./">Retourner à l'accueil</a>
+
+    </header>
+
+     <table class="standard-table">
+       <caption><img src="images/logo.png" alt="Logo" /> <?= $title ?> Task Details</caption>
+
+         <thead>
+             <tr>
+                 <th>Title</th>
+                 <th>Goal</th>
+                 <th>End date</th>
+             </tr>
+         </thead>
+         <tbody>
+           <tr id="row_<?= $id ?>" >
+             <td><?= $title ?></td>
+             <td><?= $goal ?></td>
+             <td><?= $end_date ?></td>
+           </tr>
+         </tbody>
+     </table>
+
+     <form id="formUpdate" action="index.php" method="post">
+       <input type="number" name="id" value="<?= $id ?>" hidden="">
+       <input placeholder="<?= $title ?>" type="text" name="title">
+       <input placeholder="<?= $goal ?>" type="text" name="goal">
+       <input placeholder="<?= $end_date ?>" type="date" name="end_date">
+       <input type="submit" value="Update task">
+     </form>
+
+  </body>
+</html>

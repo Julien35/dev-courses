@@ -1,0 +1,30 @@
+<html>
+  <body onload="start()"></body>
+  <script>
+    function start() {
+      var body = document.getElementsByTagName("body")[0];
+      table = document.createElement("table");
+      tablebody = document.createElement("tbody");
+
+      for (var j = 0; j < 2; j++) {
+        row = document.createElement("tr");
+        for (var i = 0; i < 2; i++) {
+          cell = document.createElement("td");
+          text = document.createTextNode("la cellule est :" + i + j);
+          cell.appendChild(text);
+          row.appendChild(cell);
+          // change la couleur de fond de la cellule
+          // si la colonne est 0. Si la colonne est 1, cache la cellule
+          if (i == 0) {
+            cell.style.background = "rgb(255,0,0)";
+          } else {
+            cell.style.display = "none";
+          }
+        }
+        tablebody.appendChild(row);
+      }
+      table.appendChild(tablebody);
+      body.appendChild(table);
+    }
+  </script>
+</html>

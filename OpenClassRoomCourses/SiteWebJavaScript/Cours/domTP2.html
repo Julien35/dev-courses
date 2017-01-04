@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dom TP2</title>
+  </head>
+  <body>
+
+    <script>
+      // On crée l'élément conteneur
+      var mainDiv = document.createElement('div');
+      mainDiv.id = 'divTP2';
+
+      //On crée les noeuds textuels
+      var textNodes = [
+        document.createTextNode('Langages basés sur EMCAScript :'),
+        document.createTextNode('JavaScript'),
+        document.createTextNode('JScript'),
+        document.createTextNode('ActionScript'),
+        document.createTextNode('EX4')];
+
+      //Element p
+      var firstP = document.createElement('p');
+      firstP.appendChild(textNodes[0]);
+
+      //Element ul
+      var firstUl = document.createElement('ul');
+
+      //Elment li
+      var loopLi = [];
+      var loopLiText = [];
+      for (var i = 1; i < textNodes.length; i++){
+        loopLi[i-1] = document.createElement('li');
+        console.log("loopLi[i-1] : ", loopLi[i-1]);
+        loopLiText[i-1] = loopLi[i-1].appendChild(textNodes[i]);
+      }
+
+      // On insère le tout dans mainDiv
+      mainDiv.appendChild(firstP);
+      mainDiv.appendChild(firstUl);
+      for (var i = 0; i < loopLi.length; i++) {
+        mainDiv.appendChild(loopLi[i]);
+      }
+
+      // On insère mainDiv dans le <body>
+      document.body.appendChild(mainDiv)
+
+    </script>
+  </body>
+</html>

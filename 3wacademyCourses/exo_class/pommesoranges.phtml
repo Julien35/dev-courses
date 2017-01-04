@@ -1,0 +1,43 @@
+<?php
+$id_1 = mt_rand();
+$id_2 = mt_rand();
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pommes et Oranges</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <table>
+      <tr>
+        <td class="fruitId<?php echo "$id_1" ?>">Pommes</td>
+        <td class ="id<?php echo "$id_1" ?>">120</td>
+        <td onclick="handle(<?= $id_1 ?>)">+++</td>
+      </tr>
+      <tr>
+        <td class="fruitId<?php echo "$id_2" ?>">Oranges</td>
+        <td class ="id<?php echo "$id_2" ?>">16</td>
+        <td onclick="handle(<?= $id_2 ?>)">+++</td>
+      </tr>
+    </table>
+
+  </body>
+
+</html>
+
+<script type="text/javascript">
+function handle(id) {
+  //afficher le nombre correspondant à la ligne dans un alert, par exemple : "120 Pommes"
+  console.log(id);
+  var number = $('.id' + id).text();
+  var fruit = $('.fruitId' + id).text();
+  console.log("number = ", number);
+  console.log("fruit = ", fruit);
+  window.alert(number + " " + fruit);
+
+}
+</script>

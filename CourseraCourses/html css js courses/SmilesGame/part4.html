@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Goal: Finishing the game by adding events and game logic-->
+    <meta charset="UTF-8">
+    <title>'Match Game'_Week 3_Part 4</title>
+    <style>
+        img{position: absolute;}
+        div{position: absolute;
+            width: 500px; height:500px;}
+        /*adds vertical border line to left of rightSide div t*/
+        #rightSide{left:500px; border-left: 1px solid black;}
+    </style>
+</head>
+<body id="theBody" onload="generateFacesLeft()">
+    <h1>Match Game</h1>
+    <p>Click on the extra smiling face on the left.</p>
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+
+    <script>
+        //global variables
+        var numberOfFaces = 5;
+        var count=0;
+        var theLeftSide = document.getElementById("leftSide");
+        var theRightSide = document.getElementById("rightSide");
+        var theBody = document.getElementById("theBody");
+
+        function generateFacesLeft(){
+            while(count < numberOfFaces){
+                var this_Face=document.createElement("img");
+                this_Face.src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+                this_Face.style.top=(Math.floor(Math.random()*400)+"px");
+                this_Face.style.left=(Math.floor(Math.random()*400)+"px");
+                theLeftSide.appendChild(this_Face);
+                count++;
+            }
+            generateFacesRight();
+
+            theLeftSide.lastChild.onclick=function nextLevel(event){
+                event.stopPropagation();
+                numberOfFaces += 5;
+                generateFacesLeft();
+            };
+
+            theBody.onclick=function gameOver(){
+                alert("Game Over!");
+                theBody.onclick = null; //means that from now onwards nothing will happen when the user clicks anywhere in the web page
+                theLeftSide.lastChild.onclick = null; // means that from now onwards nothing will happen when the user clicks on the extra face.
+            };
+        }
+
+        function generateFacesRight(){
+            var leftSideImages=theLeftSide.cloneNode(true);
+            leftSideImages.removeChild(leftSideImages.lastChild);
+            theRightSide.appendChild(leftSideImages);
+        }
+/* For Part 4: [Finishing the game]
+For Part 4 you need to extend the JavaScript code developed in parts 2 and 3, mainly to handle the events and game logic.
+Variables
+    A variable called theBody is created. This points to the body e.g.
+    var theBody = document.getElementsByTagName("body")[0];
+Add an event handler function to the extra face
+    After cloning the node, you need to add an onclick event handler function to the last child of the left side, which is the face that the player is supposed to click on
+    Your code for constructing the event handler function for that node will look similar to this:
+        theLeftSide.lastChild.onclick=function nextLevel(event){
+        event.stopPropagation();
+        numberOfFaces += 5;
+        generateFaces();
+        };
+The code theLeftSide.lastChild.onclick=function nextLevel(event){ ...}
+means that we are constructing a function which will be executed when the user clicks on the last child node in theLeftSide.
+The name of the function being created (nextLevel()) is not particularly important, it can be anything appropriate.
+    The line event.stopPropagation(); is necessary in order to ensure that the event does not also get applied to other elements in the web page, such as other faces. That would trigger the function multiple times, which is not what we want.
+    The line numberOfFaces += 5;
+increases the number stored in numberOfFaces by 5, so that the next time the faces are generated there are 5 more than before on both sides
+    The line generateFaces();
+means that a new set of faces is generated. Because of the increase in value of numberOfFaces there will be 5 more faces than before on both sides.
+
+Add an event handler function to the body
+ You need to add another function for handling the situation when the player clicks on anything except the correct face
+ Your code for constructing the event handler function will look similar to this:
+    theBody.onclick = function gameOver() {
+        alert("Game Over!");
+        theBody.onclick = null;
+        theLeftSide.lastChild.onclick = null;
+    };
+    The line
+    theBody.onclick = function gameOver() {
+    means that we are constructing a function which will be executed when the user clicks on theBody.
+    The name of the function being created (gameOver()) is not particularly important, it can be anything appropriate.
+    The line alert("Game Over!");
+    is one way to show a message to the user
+    The line theBody.onclick = null;
+    means that from now onwards nothing will happen when the user clicks anywhere in the web page
+    The line
+    theLeftSide.lastChild.onclick = null;
+    means that from now onwards nothing will happen when the user clicks on the extra face.
+Delete the child nodes
+    Remember that each time the player clicks on the correct face all faces are removed and a new set of faces are generated.
+    So that means at the appropriate place all children under the leftSide div and rightSide div need to be deleted.
+    You previously learnt how to delete all child nodes on the course using a while loop. */
+    </script>
+</body>
+</html>

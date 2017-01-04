@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Z index</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* micro reset */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body,
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    /* Quelques styles de base */
+
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      line-height: 1.75;
+      color: #F1EEDD;
+      background: #B13C2E;
+    }
+
+    .main-header {
+      color: #B13C2E;
+      background: #FFF;
+    }
+    /* Les éléments sont placés l'un à côté de l'autre */
+.header-inner {
+	display: table;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto; /* on centre l'élément */
+	padding: 20px 25px; /* on ventile un peu */
+}
+.header-inner > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+/* Alignement du menu */
+.header-nav {
+	text-align: right;
+}
+/*
+   Faire passer le menu en inline (inline-block, inline-table ou inline-flex) pour le rendre sensible à l'alignement à droite. Ses items aussi sont en inline.
+*/
+.header-nav ul,
+.header-nav li {
+	display: inline;
+	list-style: none;
+}
+.header-nav a {
+	position: relative;
+	display: inline-block;
+	padding: 8px 20px;
+	vertical-align: middle;
+	font-weight: 300; /* entre regular et light */
+	letter-spacing: 0.025em;
+	color: inherit;
+	text-decoration: none;
+}
+/* Animation du lien */
+.header-nav a:after {
+	content: "";
+	position: absolute;
+	bottom: 0; right: 20px; left: 20px;
+	height: 2px;
+	background-color: #B13C2E;
+
+	/* Préparation de notre animation */
+	opacity: 0;
+	transform: translateY(5px);
+	transition: all .4s;
+}
+/* Le trait va remonter et apparaitre */
+.header-nav a:hover:after,
+.header-nav a:focus:after {
+	opacity: .6;
+	transform: translateY(0);
+}
+/* Je vire outline car juste au-dessus je définis un style :focus */
+.header-nav a:focus {
+	outline: none;
+}
+    /*div {
+      height: 200px;
+      width: 200px;
+    }*/
+
+    div#test1 {
+      height: 5em;
+      width: 50em;
+      background-color: #631b5a;
+      /*opacity: 0.5;*/
+      position: sticky;
+      /*top: 7em;*/
+      /*left: 5em;*/
+      /*bottom: 2em;*/
+    }
+
+    div#test2 {
+      height: 100em;
+      width: 60em;
+      background-color: #94bd30;
+      /*opacity: 0.5;*/
+      /*z-index: 1;*/
+      /*position: absolute;*/
+    }
+  </style>
+
+</head>
+
+<body>
+  <header id="header" role="banner" class="main-header">
+    <div class="header-inner">
+
+      <div class="header-logo">
+        <img src="logo.png" alt="Creative Juiz" width="150" height="45">
+      </div>
+
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our projects</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- <div id="test1"></div>
+  <div id="test2"></div> -->
+
+</body>
+
+</html>

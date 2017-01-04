@@ -1,0 +1,173 @@
+/*  VISUALISATION DES BLOCS  */
+
+
+/*div, header, section, article, aside, nav {
+		border: 1px dashed rgba(0,0,0,0.15);
+		background-color: rgba(0,0,0,0.05);
+	}*/
+
+
+/*.clear {
+		border: 1px dashed red;
+	}*/
+
+
+/*GLOBAL */
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: "Open Sans", Arial;
+  margin: 0;
+  /*color: #34495E;*/
+  line-height: 1.8;
+}
+a {
+  color: #49C3B4;
+  text-decoration: none;
+}
+h1, h2, h3 {
+  font-family: "Courgette";
+  font-weight: normal;
+  text-align: center;
+  padding: 2%;
+}
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+
+/* HEADER */
+
+header nav {
+  text-align: center;
+}
+header a {
+  font-family: "Courgette";
+  font-size: 1.6em;
+  display: inline-block;
+  vertical-align: top;
+  padding: 25px;
+  margin: 0 15px;
+}
+.logo {
+  margin: -25px;
+}
+header nav a .fa {
+  display: block;
+}
+#presentation {
+  background-image: url(../img/fond.jpg);
+  background-size: cover;
+  background-position: center top;
+  padding: 20% 0;
+}
+#title {
+  background-color: rgba(73, 195, 180, 0.75);
+  color: white;
+  padding: 25px;
+}
+#title h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+#title h2 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+/* MAIN */
+
+.agenda {}
+table {
+  margin: 1% auto 1%;
+  width: 90%;
+}
+th {
+  background-color: #49C3B4;
+  color: white;
+  text-align: left;
+  font-family: "Courgette";
+  padding: 0.5%;
+}
+td {
+  /*font-weight: bold;*/
+  padding: 0.5% 1%;
+  border: 1px solid #F2F2F2;
+}
+.gris {
+  background-color: #F2F2F2;
+}
+.grisClair {
+  background-color: #FAFAFA;
+}
+.leftText {
+  text-align: left;
+}
+fieldset {
+  /*border: 2px solid #f48e61;*/
+  padding: 2%;
+}
+legend {
+  text-align: center;
+  font-family: "Courgette";
+  width: 100%;
+}
+label {
+  padding: 0.5%;
+}
+#name {}
+#firstname, #lastname {
+  width: 40%;
+  padding: 0.5%;
+  margin: 1%;
+  border: 0;
+}
+#name input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid;
+}
+#name input[placeholder] {
+  color: #49C3B4;
+  padding: 0.5%;
+}
+#mail {
+  width: 82%;
+  margin: 2%;
+}
+#reason {}
+#fidelite {}
+#feedback {}
+select {
+  padding: 0.5%;
+  background-color: transparent;
+  border: 1px solid #49C3B4;
+  color: #49C3B4;
+  width: 92%;
+}
+#feedback select option {
+  color: #49C3B4;
+  text-shadow: 0 1px 0 #49C3B4;
+}
+.button {
+  color: white;
+  background-color: #49C3B4;
+  padding: 0.5% 1%;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #49c3b4;
+  margin: 0;
+  padding: 50px;
+}
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}

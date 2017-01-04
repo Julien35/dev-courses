@@ -1,0 +1,54 @@
+<section class="row">
+  <div class="table-responsive">
+
+    <?php if ($this->data['client'] != null): ?>
+      <?php
+      // var_dump(MainController::getBasePath());
+      $url = MainController::getBasePath().'updateClient';
+      ?>
+      <form class="" action=<?= $url ?> method="post">
+
+        <table class="table table-striped table-hover">
+          <caption><?=$this->data['title']?></caption>
+          <thead class="thead-default">
+            <tr>
+              <th>id</th>
+              <th>lastname</th>
+              <th>firstname</th>
+              <th>address</th>
+              <th>siret</th>
+              <th>phone</th>
+              <th>mail</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <?php $client = $this->data['client'] ?>
+            <tr>
+              <td><?= $client['id'] ?></td>
+              <td><?= $client['lastname'] ?></td>
+              <td><?= $client['firstname'] ?></td>
+              <td><?= $client['address'] ?></td>
+              <td><?= $client['siret'] ?></td>
+              <td><?= $client['phone'] ?></td>
+              <td><?= $client['mail'] ?></td>
+            </tr>
+
+            <tr class="">
+              <td><input type="hidden" name="id" value="<?= $client['id'] ?>"></td>
+              <td><input class="input-small" type="text" name="lastname" value="<?= $client['lastname'] ?>"></td>
+              <td><input class="input-small" type="text" name="firstname" value="<?= $client['firstname'] ?>"></td>
+              <td><input class="input-small" type="text" name="address" value="<?= $client['address'] ?>"></td>
+              <td><input class="input-small" type="number" name="siret" value="<?= $client['siret'] ?>"></td>
+              <td><input class="input-small" type="phone" name="phone" value="<?= $client['phone'] ?>"></td>
+              <td><input class="input-small" type="email" name="mail" value="<?= $client['mail'] ?>"></td>
+            </tr>
+
+          </tbody>
+        </table>
+        <input type="submit" value="update">
+      <?php endif ?>
+
+    </div>
+  </section>

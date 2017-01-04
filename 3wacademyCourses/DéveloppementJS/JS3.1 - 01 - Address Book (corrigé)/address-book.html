@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/address-book.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Fonctions utilitaires -->
+    <script src="js/utilities.js"></script>
+
+    <!-- Fonctions du carnet d'adresses -->
+    <script src="js/address-book.js"></script>
+    <!-- Evenements du carnet d'adresses -->
+    <script src="js/events.js"></script>
+</head>
+<body>
+    <section>
+        <h1><i class="fa fa-book"></i> Carnet d'Adresses</h1>
+
+        <!-- Contenu du carnet d'adresses (liste de contacts) -->
+        <section id="address-book"></section>
+
+        <!-- Détails d'un contact particulier du carnet d'adresses -->
+        <aside id="contact-details" class="hide">
+            <h3></h3>
+            <p></p>
+            <a href="#">Editer ce contact</a>
+        </aside>
+
+        <nav>
+            <ul class="menu">
+                <li><button id="add-contact" title="Ajouter un contact"><i class="fa fa-plus"></i></button></li>
+                <li><button id="clear-address-book" title="Effacer le carnet d'adresses"><i class="fa fa-trash-o"></i></button></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Le formulaire de saisie de contact ne s'affiche pas au démarrage -->
+    <form id="contact-form" class="hide standard-form" data-mode="add">
+        <hr>
+        <ul>
+            <li>
+                <label for="title">Civilité :</label>
+                <select id="title" name="title">
+                    <option value="1">Madame</option>
+                    <option value="2">Mademoiselle</option>
+                    <option value="3">Monsieur</option>
+                </select>
+            </li>
+            <li>
+                <label for="lastName">Nom :</label>
+                <input id="lastName" type="text" name="lastName">
+            </li>
+            <li>
+                <label for="firstName">Prénom :</label>
+                <input id="firstName" type="text" name="firstName">
+            </li>
+            <li>
+                <label for="phone">Téléphone :</label>
+                <input id="phone" type="text" name="phone" maxlength="10">
+            </li>
+            <li>
+                <input type="button" id="save-contact" value="Enregistrer">
+            </li>
+        </ul>
+    </form>
+
+    <!-- Code principal du carnet d'adresses -->
+    <script src="js/main.js"></script>
+</body>
+</html>

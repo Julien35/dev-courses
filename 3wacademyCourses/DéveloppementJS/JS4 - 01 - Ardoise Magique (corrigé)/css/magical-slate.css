@@ -1,0 +1,146 @@
+/********************** CSS GENERAL **********************/
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    /* structure */
+    margin: 0 auto;
+    min-height: 100%;
+    width: 80%;
+
+    /* presentation */
+    background-color: #ECF0F1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+canvas
+{
+    background-color: white;
+    box-shadow: 0 0 8px 1px #2C3E50;
+}
+canvas + canvas
+{
+    margin-left: 2em;
+}
+
+h1
+{
+    color: #E74C3C;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 4px #E79C94;
+}
+
+hr
+{
+    border-color: #ECF0F1;
+}
+
+main
+{
+    margin: 2em 0;
+}
+
+
+/********************** CLASSES GENERALES **********************/
+
+.hide
+{
+    display: none;
+}
+
+
+/********************** PALETTE DE COULEURS **********************/
+
+.color-palette
+{
+    cursor: crosshair;
+}
+
+
+/********************** COULEURS DE CRAYON PREDEFINIES **********************/
+
+.pen-color
+{
+    /* structure */
+    display: inline-block;
+    height: 2em;
+    position: relative;
+    top: 0.5em;
+    width: 2em;
+
+    /* presentation */
+    border-radius: 1em;
+}
+.pen-color.black
+{
+    background-color: black;
+}
+.pen-color.blue
+{
+    background-color: #0378A6;
+}
+.pen-color.green
+{
+    background-color: #13B813;
+}
+.pen-color.maroon
+{
+    background-color: #5C2121;
+}
+.pen-color.red
+{
+    background-color: #B9121B;
+}
+.pen-color.seagreen
+{
+    background-color: #029E9A;
+}
+.pen-color.yellow
+{
+    background-color: #FFBD07;
+}
+
+.pen-color + .pen-color
+{
+    margin-left: 1em;
+}
+
+
+/********************** ARDOISE **********************/
+
+.slate
+{
+    cursor: default;
+}
+
+
+/********************** BARRE D'OUTILS **********************/
+
+.toolbar ul
+{
+    /* structure */
+    padding-left: 0;
+
+    /* presentation */
+    list-style-type: none;
+}
+.toolbar ul li
+{
+    height: 2.5em;
+    margin-bottom: 0.5em;
+}
+.toolbar ul li label
+{
+    /* structure */
+    display: inline-block;
+    line-height: 2.5em;
+    width: 100px;
+
+    /* presentation */
+    color: #2980B9;
+    font-weight: bold;
+}

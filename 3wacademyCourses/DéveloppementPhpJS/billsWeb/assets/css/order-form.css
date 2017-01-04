@@ -1,0 +1,8 @@
+body {
+    padding-top: 70px;
+    background-image: url("../images/background.png");
+
+}
+li {
+  list-style: none;
+}

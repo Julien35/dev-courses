@@ -1,0 +1,35 @@
+span {
+    color: #444;
+}
+
+#color p {
+    font-family: Arial, sans-serif;
+}
+
+#color .red {
+    color: red;
+}
+
+#color .blue {
+    color: blue;
+}
+
+#color .green {
+    color: green;
+}
+
+#background p {
+    font-family: "Comic Sans MS", cursive;
+}
+
+#background .red {
+    background-color: red;
+}
+
+#background .blue {
+    background-color: blue;
+}
+
+#background .green {
+    background-color: green;
+}

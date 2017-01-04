@@ -1,0 +1,29 @@
+{
+  "name": "confusionboottrap",
+  "homepage": "https://github.com/Julien35/CourseraCourses",
+  "description": "A website for a fictional restaurant",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "conFusion",
+    "Fusion",
+    "Restaurant"
+  ],
+  "authors": [
+    "Julien"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0",
+    "bootstrap-social": "~4.11.0"
+  }
+}

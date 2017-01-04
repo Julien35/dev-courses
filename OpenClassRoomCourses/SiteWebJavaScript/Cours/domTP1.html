@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- <div id="divTP1">
+  Le
+  <strong>World Wide Web Consortium</strong>, abrégé par le sigle
+  <strong>W3C</strong>, est un
+  <a href="http://fr.wikipedia.org/wiki/Organisme_de_normalisation" title="Organisme de normalisation">organisme de standardisation</a>
+  à but non-lucratif chargé de promouvoir la compatibilité des technologies du
+  <a href="http://fr.wikipedia.org/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a>.
+</div> -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dom TP1</title>
+  </head>
+  <body>
+
+    <script>
+      // On crée l'élément conteneur
+      var mainDiv = document.createElement('div');
+      mainDiv.id = 'divTP1';
+
+      var mainDivText = document.createTextNode("Le ");
+      mainDiv.appendChild(mainDivText);
+      document.body.appendChild(mainDiv);
+
+      //texte strong 1
+      var strongPart = document.createElement('strong');
+      var strongText = document.createTextNode(" World Wide Web Consortium");
+      strongPart.appendChild(strongText);
+      document.getElementById('divTP1').appendChild(strongPart);
+
+      //texte entre les strong
+      var textEntreStrong = document.createTextNode(" , abrégé par le sigle ");
+      document.getElementById('divTP1').appendChild(textEntreStrong);
+
+      //texte strong 2
+      var strongPart2 = document.createElement('strong');
+      var strongText2 = document.createTextNode(" W3C");
+      strongPart2.appendChild(strongText2);
+      document.getElementById('divTP1').appendChild(strongPart2);
+
+      //texte après le 2ème strong
+      var textApresStrong = document.createTextNode(", est un ");
+      document.getElementById('divTP1').appendChild(textApresStrong);
+
+      //1er <a>
+      var firstA = document.createElement('a');
+      firstA.href = 'http://fr.wikipedia.org/wiki/Organisme_de_normalisation';
+      firstA.title = 'Organisme de normalisation';
+      document.getElementById('divTP1').appendChild(firstA);
+      var firstAText= document.createTextNode("organisme de standardisation");
+      firstA.appendChild(firstAText);
+
+      //Texte entre les deux <a>
+      var textEntreA = document.createTextNode(" à but non-lucratif chargé de promouvoir la compatibilité des technologies du ");
+      document.getElementById('divTP1').appendChild(textEntreA);
+
+      //2eme <a>
+      var secondA = document.createElement('a');
+      secondA.href = 'http://fr.wikipedia.org/wiki/World_Wide_Web';
+      secondA.title = 'World Wide Web';
+      document.getElementById('divTP1').appendChild(secondA);
+      var secondAText= document.createTextNode("World Wide Web");
+      secondA.appendChild(secondAText);
+
+    </script>
+  </body>
+
+</html>

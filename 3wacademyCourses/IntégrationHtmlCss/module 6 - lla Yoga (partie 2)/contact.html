@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8"/>
+    <!-- reset css & normalize -->
+    <link rel="stylesheet" href="styles/reset.css" type="text/css">
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css">
+
+    <!-- font-awesome & google font  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type="text/css">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+
+    <title>Module 6 - Ila Yoga</title>
+  </head>
+
+  <body>
+    <!--HEADER-->
+    <header>
+      <nav>
+        <a class="logo" href="index.html"><img src="img/logo.png" alt="Logo de Ila Yoga"/></a>
+        <a href="#">
+          <i class="fa fa-calendar-o"></i>Agenda</a>
+        <a href="#">
+          <i class="fa fa-book"></i>Livre d'or</a>
+        <a href="#">
+          <i class="fa fa-picture-o"></i>Album Photo</a>
+        <a href="contact.html">
+          <i class="fa fa-envelope-o"></i>Nous contacter</a>
+      </nav>
+
+    </header>
+    <!--MAIN CONTENT-->
+    <main class="container">
+      <section>
+        <h1>Réservez votre place pour le prochain cours de Yoga du rire !</h1>
+        <article class="agenda">
+
+          <table>
+            <thead>
+              <tr>
+                <th colspan="3">
+                  Yoga du rire Jacqueline (Paris)
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="leftText">
+                05 janvier 2016
+              </td>
+              <td>
+                15h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+            <tr class="gris">
+              <td class="leftText">
+                10 janvier 2016
+              </td>
+              <td>
+                16h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+            <tr class="grisClair">
+              <td class="leftText">
+                15 janvier 2016
+              </td>
+              <td>
+                15h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+            <tr class="gris">
+              <td class="leftText">
+                20 janvier 2016
+              </td>
+              <td>
+                16h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+          </table>
+
+          <table>
+            <thead>
+              <tr>
+                <th colspan="3">
+                  Yoga du rire Roger (Marseille)
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="leftText">
+                05 janvier 2016
+              </td>
+              <td>
+                15h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+            <tr class="gris">
+              <td class="leftText">
+                10 janvier 2016
+              </td>
+              <td>
+                16h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+            <tr class="grisClair">
+              <td class="leftText">
+                15 janvier 2016
+              </td>
+              <td>
+                15h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+            <tr class="gris">
+              <td class="leftText">
+                20 janvier 2016
+              </td>
+              <td>
+                16h30
+              </td>
+              <td>
+                <a href="#">Réserver ce créneau</a>
+              </td>
+            </tr>
+          </table>
+
+        </article>
+
+      </section>
+
+      <section>
+
+        <h2>Pour valider votre réservation, compléter ce formulaire :
+        </h2>
+
+        <form class="form" action="contact.html" method="post">
+
+          <!-- champs nom prénom mail -->
+          <fieldset id="name">
+            <label for="firstname"></label>
+            <p>
+              <input type="text" name="firstname" placeholder="Votre prénom" id="firstname" required>
+              <input type="text" name="lastname" placeholder="Votre nom" id="lastname" required>
+            </p>
+            <input type="email" name="email" placeholder="Votre adresse mail" id="mail" required>
+          </fieldset>
+
+          <!-- boutton radio, select... -->
+          <fieldset id="reason">
+            <legend>Quels sont les raisons de votre venue ?</legend>
+            <input type="checkbox" name="detente" id="detente">
+            <label for="detente">Besoin de me détendre</label>
+            <input type="checkbox" name="docteur" id="docteur">
+            <label for="docteur">Mon médecin m'a conseillé de venir</label>
+            <input type="checkbox" name="amis" id="amis">
+            <label for="amis">Je veux tester avec des amis</label>
+          </fieldset>
+
+          <fieldset id="fidelite">
+            <legend>Voulez-vous souscrire à notre programme de fidélité</legend>
+            <input type="radio" name="fidélité" id="fideliteOui">
+            <label for="fideliteOui">Oui</label>
+            <input type="radio" name="fidélité" id="fideliteNon" checked>
+            <label for="fideliteNon">Non</label>
+          </fieldset>
+
+          <fieldset id="feedback">
+            <legend>Comment avez-vous connu Lla Yoga ?</legend>
+            <select class="feedback" name="feedback" id="feedbackSelect">
+              <option value="internet">Par internet</option>
+              <option value="friend">Par un ami</option>
+              <option value="tv">Vue à la TV</option>
+            </select>
+          </fieldset>
+
+          <input class="button" type="submit" name="submit" value="Envoyer">
+
+        </form>
+
+      </section>
+
+    </main>
+    <!--FOOTER-->
+    <footer>
+      <p>Exercice "formulaire &amp; Tableau"</p>
+      <p>
+        3WA - 2015
+      </p>
+    </footer>
+  </body>
+
+</html>

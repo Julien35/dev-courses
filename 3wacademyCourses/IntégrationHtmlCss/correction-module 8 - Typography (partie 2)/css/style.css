@@ -1,0 +1,131 @@
+/* Déclaration de police */
+@font-face {
+    font-family: "SpecialElite";
+    src: url(../fonts/SpecialElite.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Pour déclarer la même police avec des styles différents (normal / gras / italique),
+on se sert du même nom de police, on règle juste sa propriété font-weight et sa propriété font-style */
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-italic.woff) format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-bold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* GLOBAL */
+body {
+    min-width: 400px;
+    width: 50%;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.5;
+    font-size: 1.2em;
+    font-family: "Cardo", serif;
+    /* Astuce pour voir la grille */
+    background-size: 100% 1.5em;
+    background-image: -webkit-linear-gradient(#eee .05em, transparent 1px);
+    background-image: -moz-linear-gradient(#eee .05em, transparent 1px);
+    background-image: linear-gradient(#eee .05em, transparent 1px);
+}
+
+h1, h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    line-height: 1.125;
+}
+
+h1, h2, h3 {
+    font-family: "SpecialElite", sans-serif;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin: 50px 0 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 50px 0 0;
+}
+
+h3:before {
+    content: "❧ ";
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px dotted #BBB;
+}
+
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+
+/* CITATIONS */
+q {
+    display: block;
+    font-size: 1em;
+    font-style: italic;
+    color: #666;
+    text-align: left;
+    margin-top: 3em;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    margin-bottom: 3em;
+}
+
+/* MAIN */
+h2 + p:first-letter {
+    font-size: 2.7em;
+    line-height: 1;
+    font-weight: 400;
+    font-family: "SpecialElite", sans-serif;
+    margin: 0 5px -5px 0;
+    padding: 10px 0 0 0;
+    float: left;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 3em;
+    text-align: center;
+}
+
+footer small {
+    text-align: center;
+    display: block;
+    font-size: .8em;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    word-spacing: .3em;
+}
+
+footer:before {
+    font-size: 4em;
+    display: block;
+    content: "❦";
+}

@@ -1,0 +1,269 @@
+/*
+ * Styles des éléments HTML
+ */
+*
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    color : #1E593B;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+a:hover
+{
+    color: #339966;
+}
+
+body
+{
+    /* structure */
+    border-top: 1.5em solid #EF4036;
+    padding: 1em 5em;
+
+    /* presentation */
+    font-family: 'Karla', sans-serif;
+}
+
+fieldset
+{
+    /* structure */
+    margin-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    /* presentation */
+    border-color: #1E593B;
+    border-radius: 6px;
+}
+fieldset legend
+{
+    /* structure */
+    padding: 0 0.5em;
+
+    /* presentation */
+    color: #1E593B;
+    font-weight: bold;
+}
+
+footer
+{
+    /* structure */
+    margin-top: 3em;
+
+    /* presentation */
+    text-align: center;
+}
+footer .fa-heart
+{
+    color: #EF4036;
+}
+
+h1
+{
+    color: #EF4036;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    letter-spacing: 0.15em;
+    text-align: center;
+}
+h1 a,
+h1 a:hover
+{
+    color: inherit;
+}
+h1 img
+{
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+h2
+{
+    /* structure */
+    margin: 1.5em 0;
+
+    /* presentation */
+    color: #1E593B;
+}
+
+html
+{
+    background: url('../images/background.png') repeat;
+    overflow-y: scroll;
+}
+
+
+/*
+ * Classes génériques
+ */
+.hidden
+{
+    display: none;
+}
+
+.large
+{
+    font-size: 125%;
+    vertical-align: bottom;
+}
+
+.layout-center
+{
+    text-align: center;
+}
+
+.layout-right
+{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+.link-list,
+.generic-form ul
+{
+    /* structure */
+    padding-left: 0;
+    position: relative;
+
+    /* presentation */
+    list-style-type: none;
+}
+.link-list li
+{
+    display: inline-block;
+}
+
+.small
+{
+    font-size: 75%;
+    vertical-align: bottom;
+}
+
+
+/*
+ * CSS de l'interface utilisateur
+ */
+.user-interface
+{
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.user-interface .welcome
+{
+    display: inline-block;
+    margin: 0 1em;
+}
+.user-interface .welcome strong
+{
+    color: #EF4036;
+}
+
+
+/*
+ * CSS des tableaux listant des aliments
+ */
+.meal-list img
+{
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: opacity 0.25s;
+    vertical-align: middle;
+}
+.meal-list img + em
+{
+    margin-left: 1em;
+}
+.meal-list p
+{
+    text-align: justify;
+}
+.meal-list tr:hover img
+{
+    opacity: 1;
+}
+
+/*
+ * CSS de la page d'accueil
+ */
+.notice
+{
+    /* structure */
+    margin-bottom: 2em;
+
+    /* presentation */
+    background-color: rgba(208, 255, 255, 0.33);
+    border: 1px solid #339966;
+    border-radius: 6px;
+    color: #339966;
+    font-size: 1.33em;
+    text-align: center;
+}
+
+
+/*
+ * CSS de la page de commande
+ */
+.basket-empty
+{
+    color: #339966;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.meal-details
+{
+    /* structure */
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: 0.75em;
+
+    /* presentation */
+    background-color: #D0FFFF;
+    border-radius: 4px;
+    border: 1px solid #1E593B;
+}
+.meal-details:after
+{
+    clear: left;
+    content: ' ';
+    display: block;
+}
+.meal-details img
+{
+    float: left;
+    margin-right: 1em;
+}
+.meal-details p
+{
+    /* structure */
+    margin-top: 0;
+
+    /* presentation */
+    text-align: justify;
+}
+
+
+/*
+ * CSS de la page de récapitulatif de la commande
+ */
+.invoice
+{
+    /* structure */
+    margin: 2em 0 1em 50%;
+    padding: 0 1em;
+
+    /* presentation */
+    background-color: #D0FFFF;
+    border-radius: 4px;
+    border: 1px solid #1E593B;
+}
+.invoice .city
+{
+    text-transform: uppercase;
+}

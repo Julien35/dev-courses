@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Traducteur Anglais - Français</title>
+    <link rel="stylesheet" href="translate.css">
+  </head>
+  <body>
+
+    <main>
+      <h1>Traducteur Anglais - Français</h1>
+
+
+
+      <?php if (!$result) {
+       ?>
+
+      <form class="" action="translate.php" method="post">
+      <p>
+        <label for="word">Mot :</label>
+        <input class="form-margin-input" type="text" name="word" placeholder="mot à traduire">
+      </p>
+
+      <p>
+        <label for="meaning">Sens de traduction :</label>
+        <select class="form-margin-select" name="direction">
+          <option value="toEnglish">français vers anglais</option>
+          <option value="toFrench">anglais vers français</option>
+        </select>
+      </p>
+
+      <button type="submit" name="submit">Traduire</button>
+      </form>
+
+
+      <?php } else {
+      ?>
+
+
+
+
+      <p>
+        <?php echo $result; ?>
+      </p>
+      <p>
+         <a href="translate.php">Retour</a>  
+       </p>
+        <?php
+       } ?>
+
+
+    </main>
+
+  </body>
+</html>

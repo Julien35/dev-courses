@@ -1,0 +1,132 @@
+/*  VISUALISATION DES BLOCS  */
+
+	/*div, header, section, article, aside, nav {
+		border: 1px dashed rgba(0,0,0,0.15);
+		background-color: rgba(0,0,0,0.05);
+	}*/
+
+	/*.clear {
+		border: 1px dashed red;
+	}*/
+
+/*GLOBAL */
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	font-family: "Open Sans", Arial;
+	margin: 0;
+	color: #34495E;
+	line-height: 1.8;
+}
+
+a {
+	color: #49C3B4;
+	text-decoration: none;
+}
+
+h1, h2, h3 {
+	font-family: "Courgette";
+	font-weight: normal;
+	text-align: center;
+}
+
+.container {
+	/*max-width: 1500px;*/
+	max-width: 800px; /* Pour test */
+	margin: 0 auto;
+	padding: 25px;
+	background-color: white;
+}
+
+/* HEADER */
+header nav {
+	text-align: center;
+}
+
+header a {
+	font-family: "Courgette";
+	font-size: 1.6em;
+	display: inline-block;
+	vertical-align: top;
+	padding: 25px;
+	margin: 0 15px;
+	/*color: #49C3B4;*/
+}
+
+.logo {
+	margin: -25px;
+}
+
+header nav a .fa {
+	display: block;
+}
+#presentation {
+	background-image: url(../img/fond.jpg);
+	background-size: cover;
+	background-position: center top;
+	padding: 20% 0;
+}
+
+#title {
+	background-color: rgba(73, 195, 180,0.75);
+	color: white;
+	padding: 25px;
+}
+
+#title h1 {
+	font-size: 3em;
+	margin-bottom: 0;
+}
+
+#title h2 {
+	margin-top: 0;
+	font-size: 2em;
+}
+
+/* MAIN */
+.promo {
+	background-color: #75D1C6;
+	padding: 25px;
+	margin: 0;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+}
+
+.description {
+	background-color: #B7B12E;
+	color: white;
+	font-size: 1.1em;
+	line-height: 2;
+}
+
+.bulle {
+	display: inline-block;
+	width: 30%;
+	margin: 1%;
+	padding: 2%;
+	/*text-align: center;*/
+}
+
+.bulle img {
+	width: 200px;
+}
+
+iframe {
+	width: 100%;
+}
+
+/* FOOTER */
+footer {
+	background-color: #49c3b4;
+	margin: 0;
+	padding: 50px;
+}
+
+footer p {
+	color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+}

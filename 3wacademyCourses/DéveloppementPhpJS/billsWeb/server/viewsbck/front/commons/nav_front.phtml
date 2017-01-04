@@ -1,0 +1,143 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+  <section class="container">
+
+    <header class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/assets/images/logo.jpg" height="30" width="41">
+      </a>
+    </header>
+
+    <main id="navbar" class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav">
+        <li <?php if (strcasecmp($this->data['activeLink'], 'home') === 0) {
+    echo 'class="active"';
+}?>>
+          <a href="/">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+        </li>
+        <li>
+            <a href="aboutus.html">
+              <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
+        </li>
+        <li>
+            <a href="contactus.html">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</a>
+        </li>
+        <li <?php if (strcasecmp($this->data['activeLink'], 'article') === 0) {
+    echo 'class="active"';
+}?>>
+            <a href="articles">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+            Articles</a>
+        </li>
+      </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a input="button" id="loginbutton" class="btn">
+            <!-- data-toggle="modal" data-target="#loginModal"-->
+            <i class="glyphicon glyphicon-log-in"></i> Login</a>
+          </li>
+          <li>
+            <a input="button" id="registerbutton" class="btn">
+            <!-- data-toggle="modal" data-target="#loginModal"-->
+            <i class="glyphicon glyphicon-th-list"></i> Register</a>
+          </li>
+
+          <li>
+            <?php include VIEWS_PATH.'/cart.phtml'; ?>
+          </li>
+
+        </ul>
+
+      </main>
+    </section>
+</nav>
+
+
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-inline" method="post" action="login">
+          <div class="form-group">
+            <label class="sr-only" for="email"> Email address</label>
+            <input type="email" class="form-control input-sm" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="password">Password</label>
+            <input type="password" class="form-control input-sm" name="password" placeholder="Password" required>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-info">Sign in</button>
+            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section id="registerModal" class="modal fade" role="dialog">
+  <article class="modal-dialog">
+    <div class="modal-content">
+
+      <header class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Register</h4>
+      </header>
+
+      <main class="modal-body">
+        <form class="form" action="register" method="post">
+
+            <div class="form-group">
+              <label>Firstname</label>
+              <input type="text" name="firstname" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Lastname</label>
+              <input type="text" name="lastname" class="form-control">
+            </div>
+
+          <div class="form-group">
+            <label>Siret Number</label>
+            <input type="text" name="siret" size="14" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Enter Email Address Here.." class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password Here.." class="form-control" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-info">Sign Up</button>
+            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+          </div>
+
+        </form>
+      </main>
+
+    </div>
+  </article>
+</section>

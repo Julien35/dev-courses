@@ -1,0 +1,192 @@
+/*  VISUALISATION DES BLOCS  */
+
+/*div, header, section, article, aside, nav {
+	border: 1px dashed rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.05);
+}*/
+
+/*.clear {
+	border: 1px dashed red;
+}*/
+
+/*GLOBAL */
+body {
+	font-family: Arial;
+	margin: 0;
+	color: #424953;
+	line-height: 1.8;
+	font-family: "Open Sans";
+	background-image: url(../img/fond.png);
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 0 auto;
+}
+
+h1, h2, h3 {
+	font-family: "Slabo 27px";
+	font-weight: normal;
+}
+
+/* CTA = Call To Action */
+.cta {
+	font-family: "Slabo 27px";
+	font-size: 1.1em;
+	color: white;
+	background-color: #1B9CA2;
+	padding: 10px;
+	float: right;
+	margin-top: 15px;
+}
+
+.cta i {
+	margin-left: 10px;
+}
+
+/* HEADER */
+header {
+	background-color: #25B3B4;
+	padding: 0 0 15px;
+	border-top: 5px solid #1B9CA2;
+	border-bottom: 5px solid #1B9CA2;
+	margin-top: 100px;
+}
+
+header nav {
+	text-align: center;
+}
+
+header li {
+	display: inline-block;
+	font-family: "Slabo 27px";
+	font-size: 1.4em;
+}
+
+header li a {
+	color: white;
+	padding: 15px;
+}
+
+/* MAIN */
+main.container {
+	margin-top: 50px;
+}
+
+main p {
+	margin: 15px 0;
+}
+
+section h1 {
+	text-align: center;
+	font-size: 2.5em;
+}
+
+article {
+	float: left;
+	width: 45%;
+	padding: 2.5%;
+}
+
+#presentation {
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Rubrique Recette */
+#recipe {
+	width: 65%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #B6DFDD;
+	padding: 2.5%;
+	margin: 50px 2% 0 0;
+}
+
+#recipe h2 {
+	font-size: 2em;
+	margin: 0;
+	text-align: center;
+}
+
+#recipe span {
+	color: #1b9ca2;
+	font-size: 2em;
+}
+
+#recipe h3 {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+#recipe h3 i {
+	color: #25B3B4;
+	margin: 0 5px;
+	font-size: 0.8em;
+}
+
+#recipe img {
+	float: left;
+	margin-right: 15px;
+	border-radius: 50%;
+}
+
+/* Rubrique Evenement */
+aside {
+	width: 20%;
+	display: inline-block;
+	padding: 2.5%;
+	margin-top: 50px;
+	background-color: #25B3B4;
+	color: white;
+	border: 5px solid #1B9CA2;
+}
+
+aside h2 {
+	margin-top: 0;
+}
+
+aside span {
+	color: #B6DFDD;
+}
+
+aside ul li {
+	list-style-type: none;
+}
+
+aside ul li a {
+	color: #B6DFDD;
+}
+
+aside ul li p {
+	font-size: 0.9em;
+	margin: 0 0 15px;
+}
+
+#vignette {
+	margin: -75px -75px 0 0;
+	float: right;
+}
+
+/* FOOTER */
+footer {
+	margin-top: 25px;
+	text-align: center;
+}
+
+footer li {
+	display: inline-block;
+	font-family: "Slabo 27px";
+	font-size: 10pt;
+	padding: 5px 25px;
+}
+
+footer li a {
+	color: #424953;
+}

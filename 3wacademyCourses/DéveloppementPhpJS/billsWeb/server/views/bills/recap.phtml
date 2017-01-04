@@ -1,0 +1,74 @@
+<?php
+// var_dump($this->data['bill']);
+?>
+
+<?php if (self::isAdmin() && isset($this->data['bill'])) { ?>
+
+<section>
+
+</section>
+
+<?php } elseif (self::isUser() && isset($this->data['bill'])) { ?>
+
+
+  <section class="container text-center">
+
+    <div class="col-md-5 col-sm-12">
+      <div class="bigcart"></div>
+      <h1>Your shopping cart</h1>
+    </div>
+
+    <div class="col-md-7 col-sm-12 text-left">
+      <ul>
+        <li class="row list-inline columnCaptions">
+          <span>QTY</span>
+          <span>ITEM</span>
+          <span>Price</span>
+        </li>
+
+        <?php foreach ($this->data['bill'] as $key => $element):?>
+
+            <?php if (isset($element['product'])):
+              // var_dump($element);
+              $product = $element['product'];
+              // var_dump($product);
+              ?>
+
+              <li class="row">
+                <span class="quantity"><?= $product['orderQuantity'] ?></span>
+                <span class="itemName"><?= $product['name'] ?></span>
+                <span class="popbtn"><a class="arrow"></a></span>
+                <span class="price"><?= $product['totalPrice'] ?></span>
+              </li>
+
+          <?php endif; ?>
+        <?php endforeach; ?>
+
+        <?php if (isset($this->data['bill'])):
+          $totalCart = $this->data['bill']['totalCart'];
+          // var_dump($totalCart);
+          // var_dump(MainController::getBasePath());
+          $url = MainController::getBasePath() ."payment";
+        ?>
+
+        <li class="row totals">
+          <span class="itemName">Total:</span>
+          <span class="price"><?= $totalCart ?> €</span>
+          <span class="order"> <a class="text-center" href=<?= $url ?>>PAYMENT</a></span>
+        </li>
+
+        <?php endif; ?>
+
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- The popover content -->
+
+  <div id="popover" style="display: none">
+    <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+  </div>
+
+<?php } ?>

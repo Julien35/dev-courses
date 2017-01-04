@@ -1,0 +1,86 @@
+/* Déclaration de police */
+@font-face {
+    font-family: "SpecialElite";
+    src: url(../fonts/SpecialElite.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Pour déclarer la même police avec des styles différents (normal / gras / italique),
+on se sert du même nom de police, on règle juste sa propriété font-weight et sa propriété font-style */
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-italic.woff) format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-bold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* GLOBAL */
+body {
+    min-width: 400px;
+    width: 50%;
+    margin: 0 auto;
+    color: #555;
+    font-size: 1.2em;
+    font-family: "Cardo", serif;
+}
+
+h1, h2 {
+    font-size: 4em;
+    /* On ne met pas de texte en majuscule dans le HTML : il s’agit de présentation donc on le fait en CSS */
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    font-family: "SpecialElite", sans-serif;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 50px 0 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 50px 0 0;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px dotted #BBB;
+}
+
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+
+/* CITATIONS */
+q {
+    display: block;
+    font-size: 1em;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    margin-top: 3em;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    margin-bottom: 3em;
+}

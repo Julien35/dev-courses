@@ -1,0 +1,71 @@
+<section>
+
+  <?php
+  // var_dump($_SESSION);
+  // var_dump($this->data);
+  ?>
+
+  <h1> <?=$this->data['title']?> </h1>
+  <?php $article = $this->data['article']; ?>
+
+  <?php
+  // var_dump(MainController::getBasePath());
+  $url = MainController::getBasePath() ."updateArticle";
+   ?>
+  <form class="" action=<?= $url ?> method="post">
+
+    <table class="table table-striped table-hover table-sm">
+      <caption><?=$this->data['title']?></caption>
+      <thead class="thead-default">
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>description</th>
+          <th>photo</th>
+          <th>quantity</th>
+          <th>msrp</th>
+          <th>buyprice</th>
+          <th>saleprice</th>
+        </tr>
+      </thead>
+
+      <tbody>
+            <tr class="">
+            <td><?= $article['id'] ?></td>
+            <td><?= $article['name'] ?></td>
+            <td><?= $article['description'] ?></td>
+            <td><?= $article['photo'] ?></td>
+            <td><?= $article['quantity'] ?></td>
+            <td><?= $article['msrp'] ?></td>
+            <td><?= $article['buyprice'] ?></td>
+            <td><?= $article['saleprice'] ?></td>
+          </tr>
+
+          <tr class="">
+              <td><input type="hidden" name="id" value="<?= $article['id'] ?>"></td>
+              <td><input class="input-small" type="text" name="name" value="<?= $article['name'] ?>"></td>
+              <td><input class="input-small" type="text" name="description" value="<?= $article['description'] ?>"></td>
+              <td><input class="input-small" type="text" name="photo" value="<?= $article['photo'] ?>"></td>
+              <td><input class="input-small" type="number" name="quantity" value="<?= $article['quantity'] ?>"></td>
+              <td><input class="input-small" type="number" name="msrp" value="<?= $article['msrp'] ?>"></td>
+              <td><input class="input-small" type="number" name="buyprice" value="<?= $article['buyprice'] ?>"></td>
+              <td><input class="input-small" type="number" name="saleprice" value="<?= $article['saleprice'] ?>"></td>
+          </tr>
+
+      </tbody>
+    </table>
+    <input type="submit" value="update">
+  </form>
+
+
+    <div class="col-sm-12 thumbnail">
+      <p>
+        <img class="img-rounded" src="<?= ASSETS_PATH ?>images/meals/<?=$article['photo'] ?>" alt="<?=$article['name'] ?>">
+      </p>
+      <h4><?=$article['name'] ?></h4>
+      <p>
+        <?= $article['description']  ?>
+      </p>
+      </div>
+
+  </section>

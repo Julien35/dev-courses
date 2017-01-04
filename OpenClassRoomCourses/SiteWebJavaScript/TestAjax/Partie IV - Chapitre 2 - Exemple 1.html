@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://user.oc-static.com/ftp/javascript/part4/chap2/ex1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Partie IV - Chapitre 2 - Exemple 1</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #fileContent {
+        margin-top: 100px;
+      }
+
+      #fileContent span {
+        padding: 3px 6px;
+        border: 1px solid #888;
+        background-color: #DDD;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <p>
+      Veuillez choisir quel est le fichier dont vous souhaitez voir le contenu :
+    </p>
+
+    <p>
+      <input type="button" value="file1.txt">
+      <input type="button" value="file2.txt">
+    </p>
+
+    <p id="fileContent">
+      <span>Aucun fichier chargé</span>
+    </p>
+
+    <script>
+      
+      function loadFile(file) {
+        
+          var xhr = new XMLHttpRequest();
+
+          // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
+          xhr.open('GET', file);
+
+          xhr.onreadystatechange = function() { // On gère ici une requête asynchrone
+
+              if (xhr.readyState == 4 && xhr.status == 200) { // Si le fichier est chargé sans erreur
+
+                  document.getElementById('fileContent').innerHTML = '<span>' + xhr.responseText + '</span>'; // Et on affiche !
+
+              }
+
+          }
+
+          xhr.send(null); // La requête est prête, on envoie tout !
+
+      }
+
+      (function() { // Comme d'habitude, une fonction anonyme pour éviter les variables globales
+
+          var inputs = document.getElementsByTagName('input'),
+              inputsLen = inputs.length;
+        
+          for (var i = 0 ; i < inputsLen ; i++) {
+          
+              inputs[i].onclick = function() {
+                  loadFile(this.value); // À chaque clique, un fichier sera chargé dans la page
+              };
+
+          }
+
+      })();
+
+    </script>
+
+  
+</body></html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <Exemple id="1" libelle="Chocolat" />
+    <Exemple id="3" libelle="Framboise" />
+    <Exemple id="4" libelle="Cacao" />
+    <Exemple id="5" libelle="Caramel" />
+    <Exemple id="6" libelle="Cerise" />
+    <Exemple id="7" libelle="Fraise" />
+</dataset>

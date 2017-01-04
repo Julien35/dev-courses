@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/user">
+                <img src="/assets/images/logo.jpg" height="30" width="41">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li <?php if(!strcasecmp($this->data['activeLink'],'client')) {echo "class=\"active\"";}?>>
+                  <a href="/user/client">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                      Profil</a>
+              </li>
+              <li <?php if(!strcasecmp($this->data['activeLink'],'bill')) {echo "class=\"active\"";}?>>
+                  <a href="/user/bills">
+                    <i class="fa fa-file" aria-hidden="true"></i>
+                      Bills</a>
+              </li>
+                <li <?php if(!strcasecmp($this->data['activeLink'],'article')) {echo "class=\"active\"";}?>>
+                    <a href="/user/articles">
+                      <i class="fa fa-cubes" aria-hidden="true"></i>
+                       Articles</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a type="button" id="logoutbutton" href="/user/logout">
+                  <!-- data-toggle="modal" data-target="#loginModal"-->
+                  <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+              </li>
+              <li>
+                <?php include VIEWS_PATH.'/cart.phtml'; ?>
+              </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

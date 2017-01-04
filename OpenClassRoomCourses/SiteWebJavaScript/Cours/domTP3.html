@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dom TP3</title>
+    </head>
+    <body>
+
+        <script>
+            // On crée l'élément conteneur
+            var mainDiv = document.createElement('div');
+            mainDiv.id = 'divTP3';
+
+            //On crée les noeuds textuels
+            var Languages = [
+                {
+                    dt: document.createTextNode('JavaScript'),
+                    dd: document.createTextNode('JavaScript est un langage de programmation de scripts principalement utilisé dans les pages web interactives mais aussi coté serveur.')
+                }, {
+                    dt: document.createTextNode('JScript'),
+                    dd: document.createTextNode('JScript est le nom générique de plusieurs implémentations d\'ECMAScript\ 3 créées par Microsoft.')
+                }, {
+                    dt: document.createTextNode('ActionScript'),
+                    dd: document.createTextNode('ActionScript est le langage de programmation utilisé au sein d\'applications\ clientes (Adobe Flash, Adobe Flex) et serveur (Flash media server, JRun, Macromedia Generator).')
+                }, {
+                    dt: document.createTextNode('EX4'),
+                    dd: document.createTextNode('ECMAScript for XML (E4X) est une extension XML au langage ECMAScript.')
+                }
+            ];
+
+            for (var variable in Languages) {
+                console.log(Languages[variable]);
+            }
+
+            // On crée le paragraphe
+            var paragraph = document.createElement('p');
+            var paragraphText = document.createTextNode('Langages basés sur ECMAScript :');
+            paragraph.appendChild(paragraphText);
+
+            // On crée la liste, et on boucle pour ajouter chaque item
+            var ulist = document.createElement('dl'),
+                uItemDt,
+                uItemDd;
+
+            for (var i = 0; i < Languages.length; i++) {
+                uItemDt = document.createElement('dt');
+                uItemDd = document.createElement('dd');
+
+                uItemDt.appendChild(Languages[i].dt);
+                uItemDd.appendChild(Languages[i].dd);
+
+                ulist.appendChild(uItemDt);
+                ulist.appendChild(uItemDd);
+            }
+
+            // On insère le tout dans mainDiv
+            mainDiv.appendChild(paragraph);
+            mainDiv.appendChild(ulist);
+
+            // On insère mainDiv dans le <body>
+            document.body.appendChild(mainDiv)
+        </script>
+    </body>
+</html>

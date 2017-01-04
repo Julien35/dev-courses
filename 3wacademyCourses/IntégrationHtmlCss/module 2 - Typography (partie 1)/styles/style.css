@@ -1,0 +1,76 @@
+
+@font-face {
+  font-family: "cardo-bold";
+  src: url("../fonts/cardo/cardo-bold.woff");
+}
+@font-face {
+  font-family: "cardo-italic";
+  src: url("../fonts/cardo/cardo-italic.woff");
+}
+@font-face {
+  font-family: "cardo-regular";
+  src: url("../fonts/cardo/cardo-regular.woff");
+}
+@font-face {
+  font-family: "SpecialElite";
+  src: url("../fonts/SpecialElite.woff");
+}
+
+/*## CSS
+- Largeur du site à 50%
+- Police utilisé: - Titre: Special Elite - Texte: Cardo - Taille de police: - h1: 4em - h2: 2.5em - h3: 1.5em
+    ## BONUS
+    Limiter la taille du contenu à 400px minimum
+*/
+
+* {
+  font-family: "cardo-regular";
+}
+body {
+  /*Largeur du site à 50%*/
+  min-width: 400px;
+  width: 55%;
+  margin: 0 auto;
+  text-align: justify;
+}
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 2.4em;
+  font-weight: 100;
+}
+h3 {
+  font-size: 1.5em;
+}
+h1, h2, h3 {
+  font-family: "SpecialElite";
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: -40px;
+}
+h1, h2 {
+  text-transform: uppercase;
+}
+.cardobold {
+  font-family: "cardo-bold";
+}
+.cardoitalic {
+  font-family: "cardo-italic";
+}
+.texte_souligne {
+  text-decoration: none;
+  border-bottom: dotted 1px #8b8e93;
+}
+
+/*footer*/
+
+footer> p {
+  font-family: "cardo-italic";
+}
+footer>p:first-child {
+  text-align: center;
+}
+footer>p:last-child {
+  text-align: right;
+}

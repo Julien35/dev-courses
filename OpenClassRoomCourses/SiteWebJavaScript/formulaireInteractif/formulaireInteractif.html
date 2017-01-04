@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!--
+Sexe <input type="radio">
+Nom <input type="text">
+Prénom  <input type="text">
+Âge <input type="text">
+Pseudo  <input type="text">
+Mot de passe  <input type="password">
+Mot de passe (confirmation) <input type="password">
+Pays  <select></select>
+Si l'utilisateur souhaite recevoir des mails  <input type="checkbox">
+ -->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="formulaireInteractif.css">
+        <title>formulaire Intéractif</title>
+    </head>
+    <body>
+
+        <form class="form" action="" id="form" method="post">
+            <fieldset>
+                <legend>formulaire Intéractif</legend>
+
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" placeholder="min de 2 caractères" id="nom" required><br>
+
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" placeholder="min de 2 caractères" id="prenom" required><br>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="toto@toto.com" required><br>
+
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age" placeholder="entre 5 et 140" required><br>
+
+                <label for="sexe">Sexe</label>
+                <input type="radio" name="sexe" id="femme" value="femme">
+                <label for="femme">femme</label>
+                <input type="radio" name="sexe" id="homme" value="homme">
+                <label for="homme">homme</label>
+            </fieldset>
+            <fieldset>
+
+                <label for="pseudo">Pseudo</label>
+                <input type="text" name="pseudo" placeholder="min de 4 caractères" id="pseudo" required><br>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password1" placeholder="min 6 caratères" required><br>
+                <label for="password">Mot de passe (confirmation)</label>
+                <input type="password" name="password" id="password2" required><br>
+
+                <label for="pays">Pays</label>
+                <select id="list">
+                    <option value="vide"></option>
+                    <option value="france">France</option>
+                    <option value="uk">Royaume Uni</option>
+                    <option value="spain">Espagne</option>
+                    <option value="germany">Allemagne</option>
+                </select><br>
+
+                <input type="checkbox" name="mail" value="mail" id="mail"> Recevoir des mails<br>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <script src="formulaireInteractif.js"></script>
+    </body>
+</html>

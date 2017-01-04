@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://learn.sdlm.be/js/part4/chap4/ex1.html -->
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>Partie IV - Chapitre 4 - Exemple 1</title>
+    </head>
+
+    <body>
+
+        <script>
+            function sendDSL() {
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'dsl_script_json.php';
+
+                document.body.appendChild(scriptElement);
+            }
+
+            function receiveMessage(json) {
+                var tree = '',
+                    nbItems,
+                    i;
+
+                for (node in json) {
+                    tree += node + "\n";
+                    nbItems = json[node].length;
+
+                    for (i = 0; i < nbItems; i++) {
+                        tree += '\t' + json[node][i] + '\n';
+                    }
+                }
+
+                alert(tree);
+            }
+        </script>
+
+        <p>
+            <button type="button" onclick="sendDSL()">Charger le JSON</button>
+        </p>
+
+    </body>
+</html>

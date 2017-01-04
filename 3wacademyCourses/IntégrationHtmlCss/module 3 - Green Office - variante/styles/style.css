@@ -1,0 +1,86 @@
+    body {
+      background-image: url("../img/fond.png");
+      margin: 0 auto;
+      text-align: justify;
+      font-size: 16px;
+    }
+    main, header, section {
+      background-color: #ffffff;
+      overflow: hidden;
+    }
+    /* header */
+
+    header {
+      background-color: #B8CB21;
+    }
+    nav {
+      float: right;
+      padding: 50px 20px 20px;
+    }
+    nav a {
+      font-family: 'Oswald', sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 20px 20px 20px 20px;
+      background-color: #B8CB21;
+    }
+    /* main */
+
+    section {
+      padding-bottom: 20px;
+    }
+    #who {
+      float: left;
+      width: 36%;
+    }
+    #what {
+      border-left: solid 2px;
+      padding-left: 2%;
+      float: right;
+      width: 57%;
+    }
+    article {
+      margin: 2% 1% 2%;
+      font-weight: 100;
+      float: left;
+    }
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      color: #B8CB21;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-family: 'Oswald', sans-serif;
+      color: #B8CB21;
+    }
+    i {
+      margin-right: 10px;
+      color: #B8CB21;
+    }
+    .imagearticle1 {
+      width: 200px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 30px;
+    }
+    .imagearticle2 {
+      width: 200px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 30px;
+    }
+    .button {
+      background-color: #B8CB21;
+      float: right;
+      text-decoration: none;
+      padding: 10px 10px 10px;
+      color: white;
+    }
+    /* footer */
+
+    footer {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 80px;
+    }

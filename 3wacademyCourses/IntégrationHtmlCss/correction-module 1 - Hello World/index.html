@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- Ici on appelle de notre CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Module 1 - Hello World</title>
+	</head>
+	<body>
+		<!-- HEADER : Dans ce cas, c'est l'entête de notre site, va le plus souvent contenir le logo et la navigation -->
+		<header>
+			<!-- Le titre le plus important de notre page, c'est le texte que nous voulons le plus mettre en avant (le plus souvent le nom du site) -->
+			<h1>Hello World ! Bienvenue à la 3WA !</h1>
+			<!-- La navigation du site -->
+			<nav>
+				<!-- Dans nos liens nous allons utiliser les ancres pour simplifier la navigation -->
+				<a href="#integration">L'intégration</a>
+				<a href="#developpement">Le développement</a>
+				<a href="#formation">La répartition des modules</a>
+				<a href="#css">Jouons avec le CSS !</a>
+			</nav>
+		</header>
+		<!-- MAIN : Dans ce cas c'est le corps de notre site, il va contenir toute les infos qui change d'une page à l'autre -->
+		<main>
+			<h2>Au cours de cette formation nous allons avoir 2 matières :</h2>
+			<h3 id="integration">L'intégration</h3>
+			<h4>Le HTML :</h4>
+			<!-- Pour le logo du HTML et du CSS, on va utiliser les liens relatifs -->
+			<img src="img/html.png" alt="Le logo du HTML" />
+			<p>Le HTML sert à créer le contenu du site : elle va contenir uniquement la partie textuelle du site.</p>
+			<h4>Le CSS :</h4>
+			<img src="img/css.jpg" alt="Le logo du CSS" />
+			<p>Le CSS va nous permettre d'ajouter la couche graphique à notre site : les couleurs, les formes, le fond, etc.</p>
+			<h3 id="developpement">Le développement</h3>
+			<!-- Pour le logo du JavaScript, du PHP et de MySQL, on va utiliser les liens absolus -->
+			<h4>Le Javascript :</h4>
+			<img src="http://d107bcup7t2y2i.cloudfront.net/assets/landing/javascript-069ab02ce9e5a4875705a0dcd2dd08c2.png" alt="Le logo du JavaScript" />
+			<p>Javascript est un langage de programmation de script employé pour rendre une page web interactive, le comportement de la page et son apparence pourra varier en fonction de certains paramètres.</p>
+			<h4>Le PHP :</h4>
+			<img src="http://seeklogo.com/images/E/ElePHPant_-_Mascot_PHP-logo-4C78D1AC4E-seeklogo.com.gif" alt="Le logo du PHP" />
+			<p>Le PHP est un langage de programmation libre, utilisé pour généré des pages web dynamiques, qui sont donc modifiés en fonction de certaines informations (heure, nom de l'utilisateur, formulaire rempli par l'utilisateur etc).</p>
+			<h4>MySQL :</h4>
+			<img src="http://www.softaculous.com/website/images/ampps/mysql.png" alt="le logo de MySQL" />
+			<p>MySQL est un système de gestion de bases de données, il permet d'enregistrer des informations
+rempli par l'utilisateur (exemple : formulaire de création de compte) pour ensuite être ré-utilisé au moment approprié (ex: connexion à un site internet avec identifiant et mot de passe).</p>
+			<hr />
+			<h2 id="formation">400 heures de formation intensive :</h2>
+			<p>Le programme de formation de la 3W Academy est découpé en 57 modules.</p>
+			<ul>
+				<li>HTML, CSS, Responsive web design, Wordpress, Bootstrap : 16 modules</li>
+			    <li>Javascript : 12 modules</li>
+			    <li>PHP, MySQL, POO, MVC : 25 modules</li>
+			    <li>Symfony : 4 modules</li>
+			</ul>
+			<hr />
+			<div id="css">
+				<h2>Et ici, nous allons un peu jouer avec le CSS !</h2>
+				<div id="color">
+					<h3>Les couleurs du texte : <span>Et ma police est Arial !</span></h3>
+					<p class="red">Ce paragraphe est rouge.</p>
+					<p class="blue">Ce paragraphe est bleu.</p>
+					<p class="green">Ce paragraphe est vert.</p>
+				</div>
+				<div id="background">
+					<h3>Les couleurs de fond : <span>Et ma police est Comic Sans MS !</span></h3>
+					<p class="red">Ce paragraphe est rouge.</p>
+					<p class="blue">Ce paragraphe est bleu.</p>
+					<p class="green">Ce paragraphe est vert.</p>
+				</div>
+			</div>
+		</main>
+		<!-- FOOTER : Dans ce cas, c'est le pied de page de notre site, il va contenir des infos comme le copyright, un plan du site, ou bien toute info supplémentaire sur le site qui n'est pas essentielle de prime abord -->
+		<footer>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Cet exercice</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="www.justine-muller.fr" property="cc:attributionName" rel="cc:attributionURL">Justine Muller</a> (HTML/CSS et certaines images) est sous licence <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<section class="row">
+
+        <h1> <?=$this->data['title']?> </h1>
+
+        <?php  for ($i = 0; $i < count($this->data['articles']); ++$i) { ?>
+        <?php $article = $this->data['articles'][$i]; ?>
+
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="<?= ASSETS_PATH ?>images/meals/<?=$article['photo'] ?>" alt="<?=$article['name'] ?>">
+                <h3><?=$article['name'] ?></h3>
+                <p>
+                  <?= $article['description']  ?>
+                </p>
+                <a class="btn btn-primary" id="<?= $article['id'] ?>"
+                  onclick="cart.add(this.id, <?="'".$article['name']."','".$article['photo']."',".$article['msrp']?> )">
+                  Add To Cart</a>
+            </div>
+
+        <?php } ?>
+
+</section>

@@ -1,0 +1,74 @@
+<?php if (self::isAdmin()) { ?>
+
+  <section class="row">
+
+  <div class="table-responsive">
+
+    <?php if($this->data['articles'] != null): ?>
+
+    <table class="table table-striped table-hover">
+      <caption><?=$this->data['title']?></caption>
+      <thead class="thead-default">
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>description</th>
+          <th>photo</th>
+          <th>quantity</th>
+          <th>msrp</th>
+          <th>buyprice</th>
+          <th>saleprice</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php  for ($i = 0; $i < count($this->data['articles']); ++$i) { ?>
+          <?php $article = $this->data['articles'][$i]; ?>
+            <tr class='clickable-row' data-href="/admin/article?id=<?=$article['id']?>">
+            <td>
+              <a href="article?id=<?=$article['id']?>"><?= $article['id'] ?></a>
+            </td>
+            <td><?= $article['name'] ?></td>
+            <td><?= $article['description'] ?></td>
+            <td><?= $article['photo'] ?></td>
+            <td><?= $article['quantity'] ?></td>
+            <td><?= $article['msrp'] ?></td>
+            <td><?= $article['buyprice'] ?></td>
+            <td><?= $article['saleprice'] ?></td>
+          </tr>
+
+          <?php
+
+   } ?>
+      </tbody>
+    </table>
+  <?php endif ?>
+
+    </div>
+  </section>
+
+<?php } else { ?>
+
+  <section class="row">
+
+          <h1> <?=$this->data['title']?> </h1>
+
+          <?php  for ($i = 0; $i < count($this->data['articles']); ++$i) { ?>
+          <?php $article = $this->data['articles'][$i]; ?>
+
+              <div class="col-sm-4">
+                  <img class="img-responsive img-rounded" src="<?= ASSETS_PATH ?>images/meals/<?=$article['photo'] ?>" alt="<?=$article['name'] ?>">
+                  <h3><?=$article['name'] ?></h3>
+                  <p>
+                    <?= $article['description']  ?>
+                  </p>
+                  <a class="btn btn-primary" id="<?= $article['id'] ?>"
+                    onclick="cart.add(this.id, <?="'".$article['name']."','".$article['photo']."',".$article['msrp']?> )">
+                    Add To Cart</a>
+              </div>
+
+          <?php } ?>
+
+  </section>
+
+<?php } ?>

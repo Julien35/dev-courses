@@ -1,0 +1,224 @@
+  /*## Attention
+
+Vérifiez bien que vous utilisez la bonne police :
+
+- Les textes en graisse normale (400) doivent utiliser
+ la version regular
+- Les textes en gras doivent utiliser la version bold
+- Les textes en gras + italique doivent utiliser
+ la version bold oblique
+- Les textes en italique doivent utiliser la version oblique
+
+Vous pouvez vérifier cela dans l’examinateur Firefox, dans
+l’onglet "Fonts"après avoir inspecter l’élément concerné.
+
+Si vous utilisez la mauvaise version, un « faux gras »
+sera utilisé, donnant un rendu amateur.*/
+  /* Déclaration de police */
+  /* Pour déclarer la même police avec des styles différents
+(normal / gras / italique),on se sert du même nom de police,
+on règle juste sa propriété font-weight et
+sa propriété font-style */
+
+  @font-face {
+    font-family: "Cantarell normal";
+    src: url(../fonts/cantarell_regular/Cantarell-Regular-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Cantarell bold";
+    src: url(../fonts/cantarell_bold/Cantarell-Bold-webfont.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Cantarell bold italic";
+    src: url(../fonts/cantarell_boldoblique/Cantarell-BoldOblique-webfont.woff) format("woff");
+    font-weight: bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Cantarell normal italic";
+    src: url(../fonts/cantarell_oblique/Cantarell-Italic-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: italic;
+  }
+  /* GLOBAL */
+
+  div, header, section, article, aside, nav {
+    /*border: 1px dashed rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);*/
+  }
+  * {
+    font-family: "Cantarell normal";
+  }
+  body {
+    background-image: url(../img/body_bg.png);
+    background-repeat: repeat-x;
+    background-position: 0 6.5%;
+  }
+  h1, h2 {}
+  a {
+    text-decoration: none;
+  }
+  .container {
+    max-width: 850px;
+    min-width: 800px;
+    margin: 0 auto;
+  }
+  .clear {
+    clear: both;
+  }
+  span {
+    color: #ADAA9A;
+  }
+  nav, cite {
+    text-align: center;
+  }
+  nav li {
+    display: inline-block;
+    font-size: 1em;
+  }
+  nav li a {
+    color: #ADAA9A;
+    /*padding: 1em;*/
+  }
+  .vert {
+    color: #A5A916;
+  }
+  /* HEADER */
+
+  header li::before {
+    text-align: center;
+    display: block;
+    content: "\25A0";
+    color: #ADAA9A;
+    padding: 0.5em;
+  }
+  header section h1 {
+    color: white;
+    text-align: center;
+    padding: 1.2%;
+    font-size: 2.2em;
+    font-family: "Cantarell bold";
+    display: enherit;
+  }
+  header img {
+    float: left;
+    padding: 0% 2% 2%;
+  }
+  header section h2 {
+    color: #D74F1B;
+    font-size: 1em;
+    padding: 2%;
+  }
+  header section p {
+    line-height: normal;
+  }
+  /* main */
+
+  main {
+    /*border: 2px solid #812a4e;*/
+    text-align: center;
+    /*margin-left: 2%;*/
+  }
+  main section {
+    /*border: 2px solid #2a2b81;*/
+    text-align: center;
+    display: inline-block;
+    width: 70%;
+    /*padding: 2%;*/
+    vertical-align: top;
+  }
+  aside {
+    /*border: 2px solid #2a2b81;*/
+    text-align: left;
+    display: inline-block;
+    width: 22%;
+    border-right: 2px dotted #ECECEC;
+    padding: 0 23px 0 0;
+    margin-right: 2%;
+  }
+  .cta {
+    text-decoration: underline;
+  }
+  aside a::before {
+    content: "\25A0";
+    color: #ADAA9A;
+    font-size: 0.7em;
+    position: relative;
+    top: -2px;
+  }
+  aside p {
+    padding-left: 8%;
+  }
+  main img {
+    padding: 2%;
+  }
+  main section header h2 {
+    font-size: 1.2em;
+    /*padding: 2%;*/
+    color: #A5A916;
+  }
+  main aside h2, main section h2 {
+    text-align: left;
+    color: #D74F1B;
+    font-size: 1.2em;
+    padding: 2%;
+    margin: 2%;
+  }
+  main aside li {
+    padding: 2%;
+  }
+  .news h2 {
+    padding: 8%;
+    /*margin: 2%;*/
+  }
+  main aside h2 {
+    border-bottom: 2px dotted #ECECEC;
+    /*line-height: normal;*/
+  }
+  main section> h2:first-child {
+    border-bottom: 2px dotted #ECECEC;
+  }
+  main article {
+    /*border: 2px solid #D74F6F;*/
+    display: inline-block;
+    width: 41%;
+    text-align: left;
+    padding: 3%;
+  }
+  main article img {
+    float: left;
+  }
+  main p {
+    line-height: normal;
+    font
+  }
+  /* footer */
+
+  footer {
+    max-width: none;
+    text-align: center;
+    color: #ADAA9A;
+    padding: 3% 0% 0%;
+  }
+  footer nav {
+    background-image: url(../img/body_bg.png);
+  }
+  footer ul {
+    padding: 1%;
+  }
+  footer nav li a {
+    color: white;
+    border-right: 2px solid white;
+    padding: 2px 5px 5px 0;
+  }
+  footer nav li:nth-child(5) a:last-child {
+    border-right: 0px solid white;
+  }
+  cite {
+    display: block;
+    padding: 2%;
+  }

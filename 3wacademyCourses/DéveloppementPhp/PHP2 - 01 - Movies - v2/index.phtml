@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/movies.css">
+</head>
+<body>
+    <h1>Les films du moment</h1>
+
+    <form class="" action="index.php" method="post">
+      <p>
+        <label for="duration">duration filter (in min) : </label>
+        <input type="number" name="duration">
+        <select name="choix">
+          <option value="-1">inférieur</option>
+          <option value="0">égale</option>
+          <option value="1">supérieur</option>
+        </select>
+
+        <input type="submit" value="ok">
+        <a href="index.php">reset</a>
+      </p>
+    </form>
+
+
+
+    <ul class="movie-list">
+      <?php foreach ($movies as $movie){
+        $movie['class'] = '';
+        if(isset($duration) AND $duration > $low_limit){
+          if (($choix == -1) AND ($movie['duration'] > $duration) OR
+          (($choix == 0) AND ($movie['duration'] != $duration)) OR
+          (($choix == 1) AND ($movie['duration'] < $duration))){
+            $movie['class'] = "hide";
+          }
+        }
+
+        ?>
+        <li class=<?= $movie['class'] ?>>
+              <img src="images/<?= $covers[$movie['cover']] ?>">
+              <p>
+                  <strong><?= $movie['title'] ?></strong> -
+                  <em><?= convertDuration($movie['duration']) ?></em>
+              </p>
+          </li>
+
+      <?php } ?>
+
+    </ul>
+
+</body>
+</html>

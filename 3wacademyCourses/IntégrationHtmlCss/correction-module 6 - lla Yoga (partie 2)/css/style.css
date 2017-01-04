@@ -1,0 +1,211 @@
+/*  VISUALISATION DES BLOCS  */
+
+
+/*div, header, section, article, aside, nav {
+		border: 1px dashed rgba(0,0,0,0.15);
+		background-color: rgba(0,0,0,0.05);
+	}*/
+
+
+/*.clear {
+		border: 1px dashed red;
+	}*/
+
+
+/*GLOBAL */
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: "Open Sans", Arial;
+  margin: 0;
+  color: #34495E;
+  line-height: 1.8;
+}
+a {
+  color: #49C3B4;
+  text-decoration: none;
+  transition: all 1s ease 1s;
+}
+a:hover {
+  transition: all 1s ease 1s;
+}
+h1, h2, h3 {
+  font-family: "Courgette";
+  font-weight: normal;
+  text-align: center;
+}
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: white;
+}
+
+/* HEADER */
+
+header nav {
+  text-align: center;
+}
+header a {
+  font-family: "Courgette";
+  font-size: 1.6em;
+  display: inline-block;
+  vertical-align: top;
+  padding: 25px;
+  margin: 0 15px;
+  color: #49C3B4;
+}
+header a:first-child {
+  padding: 0;
+}
+header nav a .fa {
+  display: block;
+}
+#presentation {
+  background-image: url(../img/fond.jpg);
+  background-size: cover;
+  background-position: center top;
+  padding: 20% 0;
+}
+#title {
+  background-color: rgba(73, 195, 180, 0.75);
+  color: white;
+  padding: 25px;
+}
+#title h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+#title h2 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+/* MAIN */
+
+.promo {
+  background-color: #75D1C6;
+  padding: 25px;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+.description {
+  background-color: #B7B12E;
+  color: white;
+  font-size: 1.1em;
+  line-height: 2;
+}
+.bulle {
+  display: inline-block;
+  width: 30%;
+  margin: 1%;
+  padding: 2%;
+  text-align: center;
+}
+.bulle img {
+  width: 200px;
+}
+iframe {
+  width: 100%;
+}
+
+/* SECTION VOYAGE */
+
+#voyage table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 25px;
+  font-weight: bold;
+}
+#voyage table thead {
+  font-family: "Courgette";
+  font-weight: normal;
+  font-size: 1.6em;
+  background-color: #49c3b4;
+  color: white;
+  padding: 10px;
+}
+
+/*tr:nth-child(even) Permettra de cibler les lignes paires d'un tableau.*/
+#voyage table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/*tr:nth-child(odd) Permettra de cibler les lignes impaires d'un tableau.*/
+#voyage table tr:nth-child(odd) {
+  background-color: #FAFAFA;
+}
+
+/*selectionne tous les premiers élements de table tr*/
+#voyage table tr:first-child {
+  background-color: inherit;
+}
+#voyage table th {
+  text-align: left;
+  font-weight: normal;
+  padding: 10px 25px;
+}
+#voyage table tr td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+#voyage table tr td:first-child {
+  text-align: left;
+}
+
+/* SECTION INFO */
+
+#info form {
+  text-align: center;
+}
+
+/*selectionne tous les input qui ont pour type text*/
+#info form input[type=text] {
+  width: 45%;
+  margin: 2.5%;
+  float: left;
+  color: #49C3B4;
+  border: 0;
+  border-bottom: 1px solid #49C3B4;
+  background-color: white;
+  padding: 10px;
+}
+#info form #mail {
+  width: 95%;
+}
+#info form input[type=checkbox], #info form input[type=radio] {
+  margin: 25px;
+}
+#info form select {
+  border: 1px solid #49C3B4;
+  background-color: white;
+  color: #49C3B4;
+  width: 100%;
+  padding: 10px;
+  margin: 2.5%;
+  width: 95%;
+}
+button {
+  background-color: #49c3b4;
+  color: white;
+  padding: 10px 25px;
+  border: 0;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #49c3b4;
+  margin: 0;
+  padding: 50px;
+}
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}

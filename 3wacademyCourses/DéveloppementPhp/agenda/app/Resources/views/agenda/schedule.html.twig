@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block title %}Agenda{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+
+            <h1>Schedule</h1>
+            <a href="{{path('account_page')}}">account</a>
+            <a href="{{path('homepage')}}">home page</a>
+
+            <article>
+              {% for key, date in dates %}
+              <ul>
+                {{ date.title.weekday ~" " ~date.title.mday  ~" " ~ date.title.year}}
+
+                {% for hour in date.hours %}
+                {% if hour.passed %}
+                <li class="meeting-passed">{{hour.dv}}</li>
+                {% elseif hour.busy and is_granted('ROLE_USER') and token == app.user.token %}
+                <li class="meeting-busy-user">
+                  <a href="{{ path('meeting_show',{'id': hour.busy.id }) }}">{{hour.dv }} {{hour.busy.phone}}</a>
+                </li>
+                {% elseif hour.busy %}
+                <li class="meeting-busy-ano">{{hour.dv}}</li>
+                {% else %}
+                <li>
+                  <a href="{{ path('meeting_new',{'token': token, 'date': hour.date }) }}">{{hour.dv}}</a>
+                </li>
+                {% endif %}
+
+                {% endfor %}
+              </ul>
+              {% endfor %}
+            </article>
+
+        </div>
+    </div>
+
+{% endblock %}

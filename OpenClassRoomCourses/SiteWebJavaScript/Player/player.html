@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="player.css">
+        <title>Player</title>
+    </head>
+    <body>
+        <div id="divPlayer">
+            <h1>Lite-Player</h1>
+
+            <audio id="audioPlayer" ontimeupdate="update(this)">
+                <source src="hype_home.ogg">
+                <source src="hype_home.mp3">
+            </audio>
+
+            <div>
+                <div id="progressBarControl">
+                    <div id="progressBar">Pas de lecture</div>
+                </div>
+                <span id="progressTime">00:00</span>
+            </div>
+
+
+
+            <button class="control" onclick="play('audioPlayer', this)">Play</button>
+            <button class="control" onclick="resume('audioPlayer')">Stop</button>
+
+            <span class="volume">
+                <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
+                <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
+                <a class="stick3" onclick="volume('audioPlayer', 0.5)"></a>
+                <a class="stick4" onclick="volume('audioPlayer', 0.7)"></a>
+                <a class="stick5" onclick="volume('audioPlayer', 1)"></a>
+            </span>
+        </div>
+        <!-- Javascript -->
+        <script src="player.js" charset="utf-8"></script>
+    </body>
+</html>

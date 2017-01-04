@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dom TP4</title>
+    </head>
+    <body>
+
+        <script>
+            // On crée l'élément conteneur
+            var mainDiv = document.createElement('div');
+            mainDiv.id = 'divTP4';
+
+            //On crée les noeuds textuels
+            var languages = ["uploader une image", "image à uploader :"];
+            console.log(languages);
+
+            //On créé le formulaire
+            var formulaire = document.createElement('form');
+            formulaire.enctype = 'multipart/form-data';
+            formulaire.method = 'post';
+            formulaire.action = 'upload.php';
+
+            mainDiv.appendChild(formulaire);
+
+            //fieldset
+            var field = document.createElement('fieldset');
+            formulaire.appendChild(field);
+
+            //legend
+            var legende = document.createElement('legend');
+            var legendeText = document.createTextNode(languages[0]);
+            legende.appendChild(legendeText);
+            field.appendChild(legende);
+
+            //Second Div
+            var secondDiv = document.createElement('div');
+            secondDiv.style = 'text-align: center';
+            field.appendChild(secondDiv);
+
+            //Partie à intéger dans la deuxième Div
+            var labelTag = document.createElement('label');
+            labelTag.for = 'inputUpload';
+            labelTagText = document.createTextNode(languages[1]);
+            labelTag.appendChild(labelTagText);
+            secondDiv.appendChild(labelTag);
+
+            var inputTag = document.createElement('input');
+            inputTag.type = 'file';
+            inputTag.name = 'inputUpload';
+            inputTag.id = 'inputUpload';
+            secondDiv.appendChild(inputTag);
+
+            var brTag = document.createElement('br');
+            var brTag2 = document.createElement('br');
+            secondDiv.appendChild(brTag);
+            secondDiv.appendChild(brTag2);
+
+            var inputTag2 = document.createElement('input');
+            inputTag2.type = 'submit';
+            inputTag2.value = 'Envoyer';
+            secondDiv.appendChild(inputTag2);
+
+            // On insère mainDiv dan le body
+            document.body.appendChild(mainDiv);
+        </script>
+    </body>
+</html>

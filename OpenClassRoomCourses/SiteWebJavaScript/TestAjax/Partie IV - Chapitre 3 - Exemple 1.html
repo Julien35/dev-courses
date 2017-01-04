@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://learn.sdlm.be/js/part4/chap3/ex1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Partie IV - Chapitre 3 - Exemple 1</title>
+  </head>
+
+  <body>
+
+    <iframe src="./Partie IV - Chapitre 3 - Exemple 1_files/file.html" name="myFrame" id="myFrame"></iframe>
+
+    <script>
+
+    function trigger() {
+        var frame = document.getElementById('myFrame');
+
+        frame = frame.contentDocument || frame.document;
+
+        alert('Page chargée !');
+    }
+
+    </script>
+
+  
+</body></html>

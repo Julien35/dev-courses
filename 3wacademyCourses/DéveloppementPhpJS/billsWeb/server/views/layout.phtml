@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<?php include_once VIEWS_PATH.'commons/head.phtml'; ?>
+<html>
+
+<body>
+  <?php include_once VIEWS_PATH.'commons/nav.phtml'; ?>
+
+  <?php if(isset($this->flashBag)): ?>
+    <?php if ($this->flashBag->hasMessages()) {
+
+      for ($i=0; $i < count($_SESSION['flash-bag']); $i++) { ?>
+
+        <p class="alert alert-warning"><?= $this->flashBag->fetchMessage()  ?></p>
+
+      <?php }
+      } ?>
+    <?php endif ?>
+
+
+  <!-- <header class="jumbotron"></header> -->
+
+  <main class="container">
+    <?php include VIEWS_PATH . $this->data['view'] ?>
+  </main>
+
+  <?php include_once VIEWS_PATH.'commons/footer.phtml'; ?>
+
+  <script type="text/javascript" src="<?= ASSETS_PATH ?>js/Cart.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<?= ASSETS_PATH ?>js/article.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<?= ASSETS_PATH ?>js/bill.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<?= ASSETS_PATH ?>js/login.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<?= ASSETS_PATH ?>js/main.js" charset="utf-8"></script>
+
+</body>
+
+</html>

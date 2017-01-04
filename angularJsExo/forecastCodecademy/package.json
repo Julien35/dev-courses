@@ -1,0 +1,16 @@
+{
+  "name": "forecast",
+  "version": "1.0.0",
+  "description": "courses angularJs",
+  "main": "index.js",
+  "dependencies": {
+    "angular-mocks": "^1.5.2",
+    "angular": "^1.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

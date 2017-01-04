@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test ng-model</title>
+
+    </head>
+    <body ng-app="getterSetterExample">
+
+        <div ng-controller="NameController as nameCtrl">
+            <form name="userForm">
+                <label>Name:
+                    <input type="text" name="userName" ng-model="nameCtrl.name" ng-model-options="{ getterSetter: true }"/>
+                </label>
+            </form>
+
+            <pre>user.name = <span ng-bind="nameCtrl.name()"></span></pre>
+
+        </div>
+
+        <div ng-controller="NumberController as numberCtrl">
+            <form name="userForm">
+                <label>Number:
+                    <input type="number" name="userNewNumber" ng-model="numberCtrl.newNumber" ng-model-options="{ getterSetter: true }"/>
+                </label>
+            </form>
+
+            <pre>user.newNumber = <span ng-bind="numberCtrl.newNumber()"></span></pre>
+
+        </div>
+
+        <div ng-controller="RangeController as rangeCtrl">
+            <form name="userForm">
+                <label>Range:
+                    <input type="range" name="userNewRange" ng-model="rangeCtrl.newRange" ng-model-options="{ getterSetter: true }"/>
+                </label>
+            </form>
+
+            <pre>user.newRange = <span ng-bind="rangeCtrl.newRange()"></span></pre>
+
+        </div>
+
+        <div ng-controller="RangeNumberController as rangeNumberCtrl">
+            <form name="userForm">
+                <label>rangeNumber:
+                    <input type="number" name="userNewRangeNumber" ng-model="rangeNumberCtrl.newRangeNumber" ng-model-options="{ getterSetter: true }"/>
+                    <input type="range" name="userNewRangeNumber" ng-model="rangeNumberCtrl.newRangeNumber" ng-model-options="{ getterSetter: true }"/>
+
+                </label>
+            </form>
+
+            <pre>user.newRangeNumber = <span ng-bind="rangeNumberCtrl.newRangeNumber()"></span></pre>
+
+        </div>
+
+        <!-- script -->
+        <script src="angular.js"></script>
+        <script src="app.module.js"></script>
+        <!-- controllers -->
+        <script src="name.controller.js"></script>
+        <script src="number.controller.js"></script>
+        <script src="range.controller.js"></script>
+        <script src="rangeNumber.controller.js"></script>
+
+    </body>
+</html>
