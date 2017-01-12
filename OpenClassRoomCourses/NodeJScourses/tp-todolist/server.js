@@ -1,0 +1,35 @@
+// server.js
+// load the things we need
+var express = require('express');
+var app = express();
+
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
+// use res.render to load up an ejs view file
+
+// index page
+app.get('/', function(req, res) {
+
+    var todolist = [
+        { id: 1 ,task: 'Faire les courses'},
+        { id: 2 ,task: 'Nourrir le chat'},
+        { id: 3 ,task: 'Arroser les plantes'},
+        { id: 4 ,task: 'Lire la suite du tuto sur Node.js'}
+    ]
+    res.render('pages/index', {
+        todolist: todolist
+    });
+});
+
+// about page
+app.get('/about', function(req, res) {
+    res.render('pages/about');
+});
+
+
+var server = app.listen(3010, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("Example app listening at http://%s:%s", host, port);
+});
