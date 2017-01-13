@@ -1,7 +1,16 @@
-// server.js
-// load the things we need
-var express = require('express');
-var app = express();
+const express = require('express');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+
+// Set up the express app
+const app = express();
+
+// Log requests to the console.
+app.use(logger('dev'));
+
+// Parse incoming requests data (https://github.com/expressjs/body-parser)
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -27,9 +36,4 @@ app.get('/about', function(req, res) {
     res.render('pages/about');
 });
 
-
-var server = app.listen(3010, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log("Example app listening at http://%s:%s", host, port);
-});
+module.exports = app;

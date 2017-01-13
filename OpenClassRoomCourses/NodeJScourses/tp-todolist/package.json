@@ -1,11 +1,20 @@
 {
   "name": "tp-todolist",
   "version": "0.1.0",
+  "scripts": {
+    "start:dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "main": "server.js",
   "author": "Julien",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "ejs": "^2.5.5",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
