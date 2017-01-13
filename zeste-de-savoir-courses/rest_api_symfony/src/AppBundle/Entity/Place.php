@@ -1,7 +1,9 @@
 <?php
+
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity()
@@ -28,6 +30,17 @@ class Place
      */
     protected $address;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Price", mappedBy="place")
+     * @var Price[]
+     */
+    protected $prices;
+
+    public function __construct()
+    {
+        $this->prices = new ArrayCollection();
+    }
+
     public function getId()
     {
         return $this->id;
@@ -41,6 +54,11 @@ class Place
     public function getAddress()
     {
         return $this->address;
+    }
+
+    public function getPrices()
+    {
+        return $this->prices;
     }
 
     public function setId($id)
@@ -60,4 +78,11 @@ class Place
         $this->address = $address;
         return $this;
     }
+
+    public function setPrices($prices)
+    {
+        $this->prices = $prices;
+        return $this;
+    }
 }
+
