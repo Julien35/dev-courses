@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name coursExoApp.controller:MainCtrl
+ * @name coursExoApp.controller:AboutCtrl
  * @description
- * # MainCtrl
+ * # AboutCtrl
  * Controller of the coursExoApp
  */
 angular.module('coursExoApp')
-  .controller('MainCtrl', function () {
+  .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

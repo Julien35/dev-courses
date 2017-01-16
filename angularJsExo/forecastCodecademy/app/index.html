@@ -19,14 +19,14 @@
   </head>
 
   <body>
-    <div class="main" ng-controller="MainController">
+    <div class="main" ng-controller="MainController as vm">
       <div class="container">
         <div class="row">
           <div class="col-sm-5 col-sm-offset-7">
-            <h1>{{ fiveDay.city_name }}</h1>
+            <h1>{{ vm.fiveDay.city_name }}</h1>
             <h2>5-day forecast</h2>
 
-            <div class="forecast" ng-repeat="day in fiveDay.days">
+            <div class="forecast" ng-repeat="day in vm.fiveDay.days">
               <div class="day row">
 
                 <!-- datetime -->
@@ -68,7 +68,7 @@
     <script src="js/controllers/MainController.js"></script>
 
     <!-- Services -->
-    <script src="js/services/forecast.js"></script>
+    <script src="js/services/forecastService.js"></script>
 
     <!-- Directives -->
 

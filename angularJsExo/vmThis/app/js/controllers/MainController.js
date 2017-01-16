@@ -6,8 +6,7 @@
     .controller('MainController', MainController);
 
   // vm = this, see john papa Y034
-
-  function MainController(forecast) {
+  function MainController(forecastService) {
     // variable name such as vm, which stands for ViewModel
     var vm = this;
     vm.value = 'ok';
@@ -18,11 +17,16 @@
 
     function getMeteo() {
       vm.value = 'hello';
+      console.log(forecastService);
+      return forecastService.then(function(data) {
+        vm.meteo = data;
+        // return vm.meteo;
+      });
     }
 
   }
 
-  // Pas compris à quoi ca sert :)
+  // Utile si fonction dans le service
   // MainController.$inject = [];
 
 })();

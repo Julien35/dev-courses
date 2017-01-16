@@ -5,15 +5,28 @@
     .module('forecastApp')
     .controller('MainController', MainController);
 
-  // variable name such as vm, which stands for ViewModel
-  // var vm = this;
-  // vm.MainController = MainController;
-
-  function MainController($scope, forecast) {
+  function MainController(forecastService) {
+    // variable name such as vm, which stands for ViewModel
     var vm = this;
-    forecast.success(function(data) {
-      $scope.fiveDay = data;
-    });
+    vm.value = 'ok';
+    vm.fiveDay = [];
+    vm.getMeteo = getMeteo;
+
+    getMeteo();
+
+    function getMeteo() {
+      vm.value = 'hello';
+      // console.log(forecastService);
+      return forecastService.then(function(data) {
+        vm.fiveDay = data;
+        // console.log(vm.fiveDay.data);
+        vm.fiveDay = vm.fiveDay.data;
+        // console.log(vm.fiveDay);
+        // return vm.fiveDay.data;
+      });
+
+    }
+
   }
 
 })();
