@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd"> 
+       
+<tiles-definitions>
+    <definition name="affichertodolist" template="/WEB-INF/views/page.jsp">
+        <put-attribute name="principal"  value="/WEB-INF/views/affichertodolist.jsp" />
+    </definition>
+
+    <definition name="creation" template="/WEB-INF/views/page.jsp">
+        <put-attribute name="principal"  value="/WEB-INF/views/creation.jsp" />
+    </definition>
+
+    <definition name="suppression" template="/WEB-INF/views/page.jsp">
+        <put-attribute name="principal"  value="/WEB-INF/views/suppression.jsp" />
+    </definition>
+
+    <definition name="modification" template="/WEB-INF/views/page.jsp">
+        <put-attribute name="principal"  value="/WEB-INF/views/modification.jsp" />
+    </definition>
+</tiles-definitions>
