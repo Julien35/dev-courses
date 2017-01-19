@@ -1,5 +1,4 @@
 <?php
-
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -39,7 +38,7 @@ class PlaceController extends Controller
         /* @var $place Place */
 
         if (empty($place)) {
-            return \FOS\RestBundle\View\View::create(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
+            return new JsonResponse(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
         }
 
         return $place;
@@ -77,10 +76,15 @@ class PlaceController extends Controller
             ->find($request->get('id'));
         /* @var $place Place */
 
-        if ($place) {
-            $em->remove($place);
-            $em->flush();
+        if (!$place) {
+            return;
         }
+
+        foreach ($place->getPrices() as $price) {
+            $em->remove($price);
+        }
+        $em->remove($place);
+        $em->flush();
     }
 
     /**
@@ -109,7 +113,7 @@ class PlaceController extends Controller
         /* @var $place Place */
 
         if (empty($place)) {
-            return \FOS\RestBundle\View\View::create(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
+            return new JsonResponse(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
         }
 
         $form = $this->createForm(PlaceType::class, $place);
@@ -127,5 +131,6 @@ class PlaceController extends Controller
             return $form;
         }
     }
+
 }
 
