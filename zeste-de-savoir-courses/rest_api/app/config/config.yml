@@ -77,5 +77,11 @@ fos_rest:
     format_listener:
         rules:
             - { path: '^/', priorities: ['json'], fallback_format: 'json' }
+
+#Le body listener de FOSRestBundle
+#Il faut savoir que de base, Symfony ne peut pas peupler les paramétres de l’objet Request avec le payload JSON.
+#Dans une application n’utilisant pas FOSRestBundle,
+#il faudrait parser manuellement le contenu en faisant json_decode($request->getContent(), true) pour accéder au nom et à l’adresse du lieu.
+#Pour s’en convaincre, désactiver le body listener qui est activé par défaut.
     body_listener:
-        enabled: false
+        enabled: true

@@ -4,9 +4,13 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity()
+ * @UniqueEntity("name")
  * @ORM\Table(name="places",
  *      uniqueConstraints={@ORM\UniqueConstraint(name="places_name_unique",columns={"name"})}
  * )
@@ -17,22 +21,30 @@ class Place
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
+     * @Groups({"place", "price"})
      */
     protected $id;
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
+     * @Groups({"place", "price"})
      */
     protected $name;
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
+     * @Groups({"place", "price"})
      */
     protected $address;
 
     /**
      * @ORM\OneToMany(targetEntity="Price", mappedBy="place")
      * @var Price[]
+     * @Groups({"place"})
      */
     protected $prices;
 

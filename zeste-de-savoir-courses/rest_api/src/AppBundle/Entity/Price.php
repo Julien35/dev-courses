@@ -3,6 +3,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity()
@@ -16,22 +18,31 @@ class Price
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
+     * @Groups({"place", "price"})
      */
     protected $id;
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotNull()
+     * @Assert\Choice({"less_than_12", "for_all"})
+     * @Groups({"place", "price"})
      */
     protected $type;
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotNull()
+     * @Assert\Type("float")
+     * @Assert\GreaterThan(0)
+     * @Groups({"place", "price"})
      */
     protected $value;
 
     /**
      * @ORM\ManyToOne(targetEntity="Place", inversedBy="prices")
      * @var Place
+     * @Groups({"price"})
      */
     protected $place;
 
