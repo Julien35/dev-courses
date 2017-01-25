@@ -1,6 +1,8 @@
 const express = require('express');
 const logger = require('morgan');
+const session = require('cookie-session');
 const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 // Set up the express app
 const app = express();
@@ -17,23 +19,54 @@ app.set('view engine', 'ejs');
 
 // use res.render to load up an ejs view file
 
-// index page
-app.get('/', function (req, res) {
+/* On utilise les sessions */
+app.use(session({secret: 'todotopsecret'}));
 
-    var todolist = [
-        {id: 1, task: 'Faire les courses'},
-        {id: 2, task: 'Nourrir le chat'},
-        {id: 3, task: 'Arroser les plantes'},
-        {id: 4, task: 'Lire la suite du tuto sur Node.js'}
-    ]
+app.use(function (req, res, next) {
+    if (typeof (req.session.todolist) == 'undefined') {
+        req.session.todolist = [
+            'Faire les courses',
+            'Nourrir le chat',
+            'Arroser les plantes',
+            'Lire la suite du tuto sur Node.js'
+        ];
+    }
+    next();
+});
+
+// Gestion des routes en-dessous
+/* On affiche la todolist et le formulaire */
+app.get('/todo', function (req, res) {
+    console.log(req.session.todolist);
     res.render('pages/index', {
-        todolist: todolist
+        todolist: req.session.todolist
     });
+});
+
+/* On ajoute un élément à la todolist */
+app.post('/todo/ajouter/', urlencodedParser, function (req, res) {
+    if (req.body.newtodo != '') {
+        req.session.todolist.push(req.body.newtodo);
+    }
+    res.redirect('/todo');
+});
+
+/* Supprime un élément de la todolist */
+app.get('/todo/supprimer/:id', function (req, res) {
+    if (req.params.id != '') {
+        req.session.todolist.splice(req.params.id, 1);
+    }
+    res.redirect('/todo');
 });
 
 // about page
 app.get('/about', function (req, res) {
     res.render('pages/about');
+});
+
+/* On redirige vers la todolist si la page demandée n'est pas trouvée */
+app.use(function (req, res, next) {
+    res.redirect('/todo');
 });
 
 module.exports = app;
