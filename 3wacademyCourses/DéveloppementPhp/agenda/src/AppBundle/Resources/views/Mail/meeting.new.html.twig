@@ -1,0 +1,24 @@
+{% set meeting_date = meeting.getMeetingDate %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meeting with {{ name }} : {{ meeting.getMeetingDate|date('l jS \o\f F Y \a\t g:ia') }}</title>
+</head>
+<body>
+	<p>Hello {{ meeting.name }},</p>
+	<p>
+		Your meeting with {{ name }} is scheduled 
+		on the {{ meeting_date|date('l jS F Y') }} at {{ meeting_date|date('g:ia')}}.
+
+		Reason of the meeting : {{ meeting.getReason }}
+
+		I will call you at the phone number : {{ meeting.phone }}
+	</p>
+	<p>
+		Thank you
+	</p>
+	<p>
+		{{ name }}
+	</p>
+</body>
+</html>

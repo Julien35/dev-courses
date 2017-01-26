@@ -68,7 +68,10 @@ class MeetingController extends Controller
             $em->persist($meeting);
             $em->flush();
 
-            $this->mail();
+            // Envoi service mail
+            $mailer = $this->get('app.mailer');
+            $mailer->sendNewMeeting($meeting);
+            $mailer->sendNewMeetingRequest($meeting);
 
             return $this->redirectToRoute('schedule', array('token' => $token));
         }
@@ -78,26 +81,6 @@ class MeetingController extends Controller
             'form' => $form->createView(),
         ));
     }
-
-    public function mail()
-    {
-    $message = \Swift_Message::newInstance()
-        ->setSubject('Hello Email')
-        ->setFrom('julien.berthau@gmail.com')
-        ->setTo('trash@puzzledge.org')
-        ->setBody("
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <title>MAIL</title>
-          </head>
-          <body>
-             Meeting ok
-          </body>
-        </html>"
-        );
-    $this->get('mailer')->send($message);
-}
 
     //  @Route("/{day}/{month}/{year}/{id}", name="meeting_show")
     /**

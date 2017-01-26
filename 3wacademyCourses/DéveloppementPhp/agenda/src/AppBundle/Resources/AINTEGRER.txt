@@ -1,0 +1,28 @@
+{% for date in dates %}
+                <ul>
+                    <li class='day'><h2>{{ date.title }} <!--<br>{# date.mday ~ '/' ~ date.mon #}--></h2></li>
+                    {% for hour in date.hours %}
+                        {# dump(hour.busy) #}
+                        {% if hour.passed %}
+                            <li class="passed" title="Réservation impossible (trop tardive)">
+                                {{ hour.displayHour }}
+                        {% elseif hour.busy %}
+                            {% if is_granted('ROLE_USER') and token == app.user.token %}
+                                <li class="busy" title="{{ hour.busy.name ~ "\n" ~ hour.busy.reason|nl2br }}">
+                                    <a href="{{ path('meeting_show', {'id': hour.busy.id })}}">
+                                        {{ hour.displayHour }}
+                                    </a>
+                            {% else %}
+                                <li class="busy" title="Créneau occupé">
+                                    {{ hour.displayHour }}
+                            {% endif %}
+                        {% else %}
+                            <li class="free" title="Créneau disponible. Cliquez si vous souhaitez vous y inscrire">
+                                <a href="{{ path('meeting_new', {'token':token, 'date': hour.date }) }}">
+                                    {{ hour.displayHour }}
+                                </a>
+                        {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
