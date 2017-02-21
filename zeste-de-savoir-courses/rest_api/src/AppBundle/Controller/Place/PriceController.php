@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller\Place;
 
+use FOS\RestBundle\View\View;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -67,6 +68,6 @@ class PriceController extends Controller
 
     private function placeNotFound()
     {
-        return \FOS\RestBundle\View\View::create(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
+        return View::create(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
     }
 }
