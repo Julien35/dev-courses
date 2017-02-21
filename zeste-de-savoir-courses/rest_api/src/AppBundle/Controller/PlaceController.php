@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Controller;
 
+use FOS\RestBundle\View\View;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -38,7 +39,7 @@ class PlaceController extends Controller
         /* @var $place Place */
 
         if (empty($place)) {
-            return new JsonResponse(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
+            return View::create(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
         }
 
         return $place;
@@ -113,7 +114,7 @@ class PlaceController extends Controller
         /* @var $place Place */
 
         if (empty($place)) {
-            return new JsonResponse(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
+            return View::create(['message' => 'Place not found'], Response::HTTP_NOT_FOUND);
         }
 
         $form = $this->createForm(PlaceType::class, $place);
