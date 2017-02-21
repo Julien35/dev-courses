@@ -89,7 +89,7 @@ class UserController extends Controller
      */
     public function updateUserAction(Request $request)
     {
-        return $this->updateUserAction($request, true);
+        return $this->updateUser($request, true);
     }
 
     /**
