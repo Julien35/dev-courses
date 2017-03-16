@@ -1,15 +1,15 @@
-app:
-    resource: "@AppBundle/Controller/DefaultController.php"
-    type:     annotation
+default:
+    resource: AppBundle\Controller\DefaultController
+    type:     rest
 
 places:
-    type:     rest
     resource: AppBundle\Controller\PlaceController
+    type:     rest
 
 prices:
-    type:     rest
     resource: AppBundle\Controller\Place\PriceController
+    type:     rest
 
 users:
-    type:     rest
     resource: AppBundle\Controller\UserController
+    type:     rest
