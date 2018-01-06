@@ -1,0 +1,10 @@
+<div class="row col-xs-12">
+    <ol>
+        <li ng-repeat="item in list.found" class="row">
+            <h4>{{ item.name }}</h4>
+            <span class="col-xs-8">{{ item.description }}</span>
+            <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ol>
+
+</div>

@@ -1,0 +1,60 @@
+<h1 class="container">sign up for the newsletter</h1>
+
+<span ng-if="">Your information has been saved</span>
+
+<fieldset class="container">
+    <legend>Registration</legend>
+    <form name='regForm' novalidate>
+
+        <input class="form-control" type="text" name="firstname" placeholder="Pick a firstname"
+               ng-model="SignUpCtrl.user.firstname"
+               required>
+        <br>
+
+        <input class="form-control" type="text" name="lastname" placeholder="Pick a lastname"
+               ng-model="SignUpCtrl.user.lastname"
+               required>
+        <br>
+
+        <input class="form-control" type="email" name="email" placeholder="Email"
+               ng-model="SignUpCtrl.user.email"
+               required>
+        <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+        <br>
+
+        <input class="form-control" type="text" name="phone" placeholder="Phone ##########"
+               ng-model="SignUpCtrl.user.phone">
+        <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span>
+        <br>
+
+        <input class="form-control" type="text" name="menuNumber" placeholder="Pick a menu number"
+               ng-model="SignUpCtrl.user.menuNumber">
+        <span ng-if="SignUpCtrl.isMenuItems === false">
+            No such menu number exists
+        </span>
+        <span ng-if="SignUpCtrl.isMenuItems === true && SignUpCtrl.completed === true">
+            Your information has been saved
+        </span>
+        <br>
+
+        <button
+                ng-disabled="regForm.$invalid"
+                ng-click="SignUpCtrl.submit()">Submit
+        </button>
+
+    </form>
+</fieldset>
+
+<div id="info" class="container">
+    firstname: {{ SignUpCtrl.user.firstname}} <br>
+    lastname: {{ SignUpCtrl.user.lastname }} <br>
+    Email: {{ SignUpCtrl.user.email}} <br>
+    Phone: {{ SignUpCtrl.user.phone }} <br>
+    Menu Number: {{ SignUpCtrl.user.menuNumber }} <br>
+    IsValid: {{ SignUpCtrl.completed }} <br>
+    MenuItems: {{ SignUpCtrl.menuItems }}
+</div>
