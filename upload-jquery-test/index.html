@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jquery File Upoad Example with $ajax and FormData</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.2.1.js"></script>
+</head>
+
+<body>
+<main>
+
+    <form id="myform" method="post">
+        <label>
+            <input type="text" name="username"/>
+        </label>
+        <label>
+              <input type="file" name="upload"/>
+        </label>
+        <button id="submitEvent" type="submit" value="createEvent">
+            Submit
+        </button>
+    </form>
+
+</main>
+</body>
+
+<script>
+
+    // or with jQuery
+    //var form = $("#myform")[0];
+
+    /**
+     * Create event submit button
+     */
+    $('#submitEvent').click(function (event) {
+        event.preventDefault();
+        //Send Data to backend
+        var form = document.getElementById("myform");
+        debugger;
+        upload(form);
+    });
+
+
+    function upload(form) {
+        $.ajax({
+            url: "http://webapp-server.local/app_dev.php/image/upload",
+            data: new FormData(form),// the formData function is available in almost all new browsers.
+            type: "post",
+            contentType: false,
+            processData: false,
+            cache: false,
+            dataType: "json", // Change this according to your response from the server.
+            error: function (err) {
+                console.error(err);
+            },
+            success: function (data) {
+                console.log(data);
+            },
+            complete: function () {
+                console.log("Request finished.");
+
+            }
+        });
+    }
+
+</script>
+</html>
